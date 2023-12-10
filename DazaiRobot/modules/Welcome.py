@@ -48,15 +48,15 @@ def circle(pfp, size=(450, 450)):
     return pfp
 
 def welcomepic(pic, user, chat, id, uname):
-    background = Image.open("Kakashiii/resources/bg.png")
+    background = Image.open("DazaiRobot/resources/bg.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize(
         (450, 450)
     ) 
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('Kakashiii/resources/default.ttf', size=40)
-    welcome_font = ImageFont.truetype('Kahashiii/resources/default.ttf', size=60)
+    font = ImageFont.truetype('DazaiRobot/resources/default.ttf', size=40)
+    welcome_font = ImageFont.truetype('DazaiRobot/resources/default.ttf', size=60)
     draw.text((30, 300), f'NAME: {unidecode(user)}', fill=(255, 255, 255), font=font)
     draw.text((30, 370), f'ID: {id}', fill=(255, 255, 255), font=font)
     draw.text((30, 40), f"Welcome to {unidecode(chat)}", fill=(225, 225, 225), font=welcome_font)
@@ -118,7 +118,7 @@ async def greet_group(_, member: ChatMemberUpdated):
             user.photo.big_file_id, file_name=f"pp{user.id}.png"
         )
     except AttributeError:
-        pic = "Kakashiii/resources/bg.png"
+        pic = "DazaiRobot/resources/bg.png"
     if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
         try:
             await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
