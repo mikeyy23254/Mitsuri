@@ -6,7 +6,7 @@ from telethon import __version__ as tlhver
 
 from DazaiRobot import BOT_NAME, BOT_USERNAME, OWNER_ID, START_IMG, SUPPORT_CHAT, pbot
 
-VIDEO  = "https://te.legra.ph/file/19cda8f010fcefaacb647.mp4"
+VIDEO  = "https://te.legra.ph/file/f45343278d40b5017a206.mp4"
 
 
 @pbot.on_message(filters.command("alive"))
