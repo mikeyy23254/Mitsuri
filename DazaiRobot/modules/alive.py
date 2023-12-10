@@ -6,6 +6,8 @@ from telethon import __version__ as tlhver
 
 from DazaiRobot import BOT_NAME, BOT_USERNAME, OWNER_ID, START_IMG, SUPPORT_CHAT, pbot
 
+VIDEO  = "https://te.legra.ph/file/19cda8f010fcefaacb647.mp4"
+
 
 @pbot.on_message(filters.command("alive"))
 async def awake(_, message: Message):
@@ -20,8 +22,8 @@ async def awake(_, message: Message):
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
         ]
     ]
-    await message.reply_photo(
-        photo=START_IMG,
+    await message.reply_video(
+        VIDEO ,
         caption=TEXT,
         reply_markup=InlineKeyboardMarkup(BUTTON),
     )
