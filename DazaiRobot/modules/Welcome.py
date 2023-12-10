@@ -48,15 +48,15 @@ def circle(pfp, size=(450, 450)):
     return pfp
 
 def welcomepic(pic, user, chat, id, uname):
-    background = Image.open("HuTao/resources/bg.jpg")
+    background = Image.open("Kakashiii/resources/bg.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize(
         (450, 450)
     ) 
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('HuTao/resources/SwanseaBold-D0ox.ttf', size=40)
-    welcome_font = ImageFont.truetype('HuTao/resources/SwanseaBold-D0ox.ttf', size=60)
+    font = ImageFont.truetype('Kakashiii/resources/SwanseaBold-D0ox.ttf', size=40)
+    welcome_font = ImageFont.truetype('Kahashiii/resources/SwanseaBold-D0ox.ttf', size=60)
     draw.text((30, 300), f'NAME: {unidecode(user)}', fill=(255, 255, 255), font=font)
     draw.text((30, 370), f'ID: {id}', fill=(255, 255, 255), font=font)
     draw.text((30, 40), f"Welcome to {unidecode(chat)}", fill=(225, 225, 225), font=welcome_font)
