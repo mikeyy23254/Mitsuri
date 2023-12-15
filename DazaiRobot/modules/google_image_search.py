@@ -18,7 +18,7 @@ from pyrogram.types import (
 from pyrogram import Client, filters
 
 # Replace "YourRobot" with your module name.
-from YourRobot import pbot
+from DazaiRobot import pbot
 
 ENDPOINT = "https://sasta-api.vercel.app/googleImageSearch"
 httpx_client = httpx.AsyncClient(timeout=60)
