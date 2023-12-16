@@ -300,10 +300,10 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/JabamiYumekoSupport/4"
+                                "ʜᴇᴀʟᴛʜ", url="https://t.me/YumekoUpdate/7"
                             ),
                             InlineKeyboardButton(
-                                "ᴅɪꜱᴀꜱᴛᴇʀ", url="https://t.me/JabamiYumekoSupport/4"
+                                "ᴅɪꜱᴀꜱᴛᴇʀ", url="https://t.me/YumekoUpdate/7"
                             ),
                         ],
                     ]
