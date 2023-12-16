@@ -20,6 +20,7 @@ async def awake(_, message: Message):
         [
             InlineKeyboardButton("ʜᴇʟᴘ", url=f"https://t.me/{BOT_USERNAME}?start=help"),
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+InlineKeyboardButton("𝙼𝚢 𝚂𝚠𝚎𝚎𝚝𝚑𝚎𝚊𝚛𝚝", url=f"https://t.me/YumekoUpdate/9"),
         ]
     ]
     await message.reply_video(
