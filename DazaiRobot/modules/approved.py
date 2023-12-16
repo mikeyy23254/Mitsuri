@@ -9,7 +9,8 @@ async def approve(_, m: ChatJoinRequest):
     if not m.from_user:
         return
     try:
-        await bot.approve_chat_join_request(m.chat.id, m.from_user.id)
+        await _.approve_chat_join_request(m.chat.id, m.from_user.id)
+        await _.send(m.from_user.id, text=f"{m.from_user.mention} Bro accpet your requests")
     except FloodWait as e:
         print(f"Sleeping for {e.x + 2} seconds due to floodwaits!")
         await asyncio.sleep(e.x + 2)
