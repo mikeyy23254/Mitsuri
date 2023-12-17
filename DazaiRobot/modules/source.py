@@ -29,7 +29,7 @@ async def repo(_, message: Message):
                     InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", user_id=OWNER_ID),
                     InlineKeyboardButton(
                         "sᴏᴜʀᴄᴇ",
-                        url="https://github.com/Anonymous-068/Kakashiii",
+                        url="https://te.legra.ph/file/ea06cb36cf484f9b05a7e.mp4",
                     ),
                 ]
             ]
