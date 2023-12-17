@@ -29,7 +29,7 @@ async def repo(_, message: Message):
                     InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/YumekoUpdate/9",),
                     InlineKeyboardButton(
                         "sᴏᴜʀᴄᴇ",
-                        url="https://te.legra.ph/file/ea06cb36cf484f9b05a7e.mp4",
+                        url="https://telegra.ph/file/99e41098f601cd518e101.mp4",
                     ),
                 ]
             ]
