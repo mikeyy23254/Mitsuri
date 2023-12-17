@@ -26,7 +26,7 @@ async def repo(_, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", user_id=OWNER_ID),
+                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", user_id=@LeviAckerman1709),
                     InlineKeyboardButton(
                         "sᴏᴜʀᴄᴇ",
                         url="https://te.legra.ph/file/ea06cb36cf484f9b05a7e.mp4",
