@@ -4,9 +4,9 @@ import time
 from platform import python_version as y
 from sys import argv
 
-from pyrogram import version as pyrover
+from pyrogram import __version__ as pyrover
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-from telegram import version as telever
+from telegram import __version__ as telever
 from telegram.error import (
     BadRequest,
     ChatMigrated,
@@ -24,7 +24,7 @@ from telegram.ext import (
 )
 from telegram.ext.dispatcher import DispatcherHandlerStop
 from telegram.utils.helpers import escape_markdown
-from telethon import version as tlhver
+from telethon import __version__ as tlhver
 
 import DazaiRobot.modules.sql.users_sql as sql
 from DazaiRobot import (
@@ -122,39 +122,38 @@ USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("DazaiRobot.modules." + module_name)
-    if not hasattr(imported_module, "mod_name"):
-        imported_module.mod_name = imported_module.name
+    if not hasattr(imported_module, "__mod_name__"):
+        imported_module.__mod_name__ = imported_module.__name__
 
-    if imported_module.mod_name.lower() not in IMPORTED:
-        IMPORTED[imported_module.mod_name.lower()] = imported_module
+    if imported_module.__mod_name__.lower() not in IMPORTED:
+        IMPORTED[imported_module.__mod_name__.lower()] = imported_module
     else:
         raise Exception("Can't have two modules with the same name! Please change one")
 
-    if hasattr(imported_module, "help") and imported_module.help:
-        HELPABLE[imported_module.mod_name.lower()] = imported_module
+    if hasattr(imported_module, "__help__") and imported_module.__help__:
+        HELPABLE[imported_module.__mod_name__.lower()] = imported_module
 
     # Chats to migrate on chat_migrated events
-    if hasattr(imported_module, "migrate"):
+    if hasattr(imported_module, "__migrate__"):
         MIGRATEABLE.append(imported_module)
 
-    if hasattr(imported_module, "stats"):
+    if hasattr(imported_module, "__stats__"):
         STATS.append(imported_module)
 
-    if hasattr(imported_module, "user_info"):
+    if hasattr(imported_module, "__user_info__"):
         USER_INFO.append(imported_module)
 
-リヴァイ | Lᴇᴠɪ Aᴄᴋᴇʀᴍᴀɴ • ༗, [18-02-2024 23:33]
-if hasattr(imported_module, "import_data"):
+if hasattr(imported_module, "__import_data__"):
         DATA_IMPORT.append(imported_module)
 
-    if hasattr(imported_module, "export_data"):
+    if hasattr(imported_module, "__export_data__"):
         DATA_EXPORT.append(imported_module)
 
-    if hasattr(imported_module, "chat_settings"):
-        CHAT_SETTINGS[imported_module.mod_name.lower()] = imported_module
+    if hasattr(imported_module, "__chat_settings__"):
+        CHAT_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
 
-    if hasattr(imported_module, "user_settings"):
-        USER_SETTINGS[imported_module.mod_name.lower()] = imported_module
+    if hasattr(imported_module, "__user_settings__"):
+        USER_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
 
 
 # do not async
@@ -183,7 +182,7 @@ def start(update: Update, context: CallbackContext):
                     return
                 send_help(
                     update.effective_chat.id,
-                    HELPABLE[mod].help,
+                    HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
                         [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
                     ),
@@ -229,7 +228,7 @@ def error_handler(update, context):
     # traceback.format_exception returns the usual python message about an exception, but as a
     # list of strings rather than a single string, so we have to join them together.
     tb_list = traceback.format_exception(
-        None, context.error, context.error.traceback
+        None, context.error, context.error.__traceback__
     )
     tb = "".join(tb_list)
 
@@ -293,9 +292,9 @@ def help_button(update, context):
             module = mod_match.group(1)
             text = (
                 "» *ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ꜰᴏʀ* *{}* :\n".format(
-                    HELPABLE[module].mod_name
+                    HELPABLE[module].__mod_name__
                 )
-                + HELPABLE[module].help
+                + HELPABLE[module].__help__
             )
             query.message.edit_text(
                 text=text,
@@ -517,9 +516,9 @@ def get_help(update: Update, context: CallbackContext):
         module = args[1].lower()
         text = (
             "Here is the available help for the *{}* module:\n".format(
-                HELPABLE[module].mod_name
+                HELPABLE[module].__mod_name__
             )
-            + HELPABLE[module].help
+            + HELPABLE[module].__help__
         )
         send_help(
             chat.id,
@@ -537,7 +536,7 @@ def send_settings(chat_id, user_id, user=False):
     if user:
         if USER_SETTINGS:
             settings = "\n\n".join(
-                "*{}*:\n{}".format(mod.mod_name, mod.user_settings(user_id))
+                "*{}*:\n{}".format(mod.__mod_name__, mod.__user_settings__(user_id))
                 for mod in USER_SETTINGS.values()
             )
             dispatcher.bot.send_message(
@@ -588,8 +587,8 @@ def settings_button(update: Update, context: CallbackContext):
             module = mod_match.group(2)
             chat = bot.get_chat(chat_id)
             text = "*{}* has the following settings for the *{}* module:\n\n".format(
-                escape_markdown(chat.title), CHAT_SETTINGS[module].mod_name
-            ) + CHAT_SETTINGS[module].chat_settings(chat_id, user.id)
+                escape_markdown(chat.title), CHAT_SETTINGS[module].__mod_name__
+            ) + CHAT_SETTINGS[module].__chat_settings__(chat_id, user.id)
             query.message.reply_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
@@ -702,7 +701,7 @@ def migrate_chats(update: Update, context: CallbackContext):
 
     LOGGER.info("Migrating from %s, to %s", str(old_chat), str(new_chat))
     for mod in MIGRATEABLE:
-        mod.migrate(old_chat, new_chat)
+        mod.__migrate__(old_chat, new_chat)
 
     LOGGER.info("Successfully migrated!")
     raise DispatcherHandlerStop
