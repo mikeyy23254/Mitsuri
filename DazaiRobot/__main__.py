@@ -718,10 +718,10 @@ def main():
 ㅤIғ I ᴍᴀʏ ʙᴇ sᴏ ʙᴏʟᴅ, ᴅᴇғᴇᴄᴛɪᴠᴇ ᴍᴇʀᴄʜᴀɴᴅɪsᴇ ᴄᴀɴ ᴏғᴛᴇɴ ʙᴇ ғɪxᴇᴅ ᴡɪᴛʜ ᴛʜᴇ sʟɪɢʜᴛᴇsᴛ ᴏғ ᴀʟᴛᴇʀᴀᴛɪᴏɴs. Tʜᴀᴛ ɪs ᴍʏ ғᴇᴇʟɪɴɢ ᴏɴ ᴛʜᴇ ᴍᴀᴛᴛᴇʀ.
 
 ✧•────────────────•✧
-ㅤ❆ ᴘʏᴛʜᴏɴ : {y()}
-ㅤ❆ ʟɪʙʀᴀʀʏ : {telever}
-ㅤ❆ ᴛᴇʟᴇᴛʜᴏɴ : {tlhver}
-ㅤ❆ ᴩʏʀᴏɢʀᴀᴍ : {pyrover}
+ㅤ❆ ᴘʏᴛʜᴏɴ : `{y()}`
+ㅤ❆ ʟɪʙʀᴀʀʏ : `{telever}`
+ㅤ❆ ᴛᴇʟᴇᴛʜᴏɴ : `{tlhver}`
+ㅤ❆ ᴩʏʀᴏɢʀᴀᴍ : `{pyrover}`
 ✧•────────────────•✧""",
                 parse_mode=ParseMode.MARKDOWN,
             )
@@ -775,7 +775,7 @@ LOGGER.info("Using long polling.")
     updater.idle()
 
 
-if name == "main":
+if__name__ == "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
