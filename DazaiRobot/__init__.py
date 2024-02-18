@@ -55,7 +55,7 @@ if ENV:
     TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
     WORKERS = int(os.environ.get("WORKERS", 8))
     ARQ_API_URL = os.environ.get("ARQ_API_URL", "http://thearq.tech?")
-    ARQ_API_KEY = os.environ.get("ARQ_API_KEY", "IDKQZT-TMRIAT-WABWFF-SKQBBC-ARQ")
+    ARQ_API_KEY = os.environ.get("ARQ_API_KEY", "FZPYYN-EKAYFK-RNPLEJ-DRVAPH-ARQ")
     DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://itwmwygu:GffWsRy9jyhFtDEUASf4cC242g1GobYZ@tai.db.elephantsql.com/itwmwygu")
  
     try:
