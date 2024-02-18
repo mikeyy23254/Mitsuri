@@ -4,9 +4,9 @@ import time
 from platform import python_version as y
 from sys import argv
 
-from pyrogram import __version__ as pyrover
+from pyrogram import version as pyrover
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-from telegram import __version__ as telever
+from telegram import version as telever
 from telegram.error import (
     BadRequest,
     ChatMigrated,
@@ -24,7 +24,7 @@ from telegram.ext import (
 )
 from telegram.ext.dispatcher import DispatcherHandlerStop
 from telegram.utils.helpers import escape_markdown
-from telethon import __version__ as tlhver
+from telethon import version as tlhver
 
 import DazaiRobot.modules.sql.users_sql as sql
 from DazaiRobot import (
@@ -71,18 +71,18 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
     
 PM_START_TEX = """
-ʜᴇʟʟᴏ `{}`, ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙʀᴏ . . . 
+ʜᴇʟʟᴏ {}, ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙʀᴏ . . . 
 """
 
 
 PM_START_TEXT = """
-*𝙷𝙴𝚈 𝙷𝙾𝙽𝙴𝚈* {}, 🥀
+*Hᴇʏ Hᴏɴᴇʏ* {}, 🥀
 *๏ ᴛʜɪs ɪs* {} !
 ➛ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ  𝙱𝙰𝙱𝚈 ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-❍ *Uptime:* `{}`
+❍ *Uptime:* {}
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-[➛](https://te.legra.ph/file/d1a3d659ee828d894b445.mp4) *ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
+[➛](https://telegra.ph/file/37460ba4380017362f6bf.mp4) *ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
 """
 
 buttons = [
@@ -96,13 +96,13 @@ buttons = [
         InlineKeyboardButton(text="ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="𝗦𝗨𝗣𝗣𝗢𝗥𝗧", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="𝗛𝗢𝗡𝗘𝗬", url=f"https://t.me/bitexalt"),
+        InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="Hᴏɴᴇʏ", url=f"https://t.me/Mikey_always"),
     ],
 ]
 
 HELP_STRINGS = f"""
-[❃](https://te.legra.ph/file/4d6eb2162729f900d9bf3.mp4)* {BOT_NAME} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
+[❃](https://telegra.ph/file/157413724f0e7350d15bd.mp4)* {BOT_NAME} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
 
 ➲ /start : ꜱᴛᴀʀᴛꜱ ᴍᴇ | ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ ɪᴛ.
 ➲ /help  : ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ꜱᴇᴄᴛɪᴏɴ.
@@ -122,38 +122,39 @@ USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("DazaiRobot.modules." + module_name)
-    if not hasattr(imported_module, "__mod_name__"):
-        imported_module.__mod_name__ = imported_module.__name__
+    if not hasattr(imported_module, "mod_name"):
+        imported_module.mod_name = imported_module.name
 
-    if imported_module.__mod_name__.lower() not in IMPORTED:
-        IMPORTED[imported_module.__mod_name__.lower()] = imported_module
+    if imported_module.mod_name.lower() not in IMPORTED:
+        IMPORTED[imported_module.mod_name.lower()] = imported_module
     else:
         raise Exception("Can't have two modules with the same name! Please change one")
 
-    if hasattr(imported_module, "__help__") and imported_module.__help__:
-        HELPABLE[imported_module.__mod_name__.lower()] = imported_module
+    if hasattr(imported_module, "help") and imported_module.help:
+        HELPABLE[imported_module.mod_name.lower()] = imported_module
 
     # Chats to migrate on chat_migrated events
-    if hasattr(imported_module, "__migrate__"):
+    if hasattr(imported_module, "migrate"):
         MIGRATEABLE.append(imported_module)
 
-    if hasattr(imported_module, "__stats__"):
+    if hasattr(imported_module, "stats"):
         STATS.append(imported_module)
 
-    if hasattr(imported_module, "__user_info__"):
+    if hasattr(imported_module, "user_info"):
         USER_INFO.append(imported_module)
 
-    if hasattr(imported_module, "__import_data__"):
+リヴァイ | Lᴇᴠɪ Aᴄᴋᴇʀᴍᴀɴ • ༗, [18-02-2024 23:33]
+if hasattr(imported_module, "import_data"):
         DATA_IMPORT.append(imported_module)
 
-    if hasattr(imported_module, "__export_data__"):
+    if hasattr(imported_module, "export_data"):
         DATA_EXPORT.append(imported_module)
 
-    if hasattr(imported_module, "__chat_settings__"):
-        CHAT_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
+    if hasattr(imported_module, "chat_settings"):
+        CHAT_SETTINGS[imported_module.mod_name.lower()] = imported_module
 
-    if hasattr(imported_module, "__user_settings__"):
-        USER_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
+    if hasattr(imported_module, "user_settings"):
+        USER_SETTINGS[imported_module.mod_name.lower()] = imported_module
 
 
 # do not async
@@ -182,7 +183,7 @@ def start(update: Update, context: CallbackContext):
                     return
                 send_help(
                     update.effective_chat.id,
-                    HELPABLE[mod].__help__,
+                    HELPABLE[mod].help,
                     InlineKeyboardMarkup(
                         [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
                     ),
@@ -228,7 +229,7 @@ def error_handler(update, context):
     # traceback.format_exception returns the usual python message about an exception, but as a
     # list of strings rather than a single string, so we have to join them together.
     tb_list = traceback.format_exception(
-        None, context.error, context.error.__traceback__
+        None, context.error, context.error.traceback
     )
     tb = "".join(tb_list)
 
@@ -242,7 +243,7 @@ def error_handler(update, context):
         html.escape(tb),
     )
 
-    if len(message) >= 4096:
+if len(message) >= 4096:
         message = message[:4096]
     # Finally, send the message
     context.bot.send_message(chat_id=OWNER_ID, text=message, parse_mode=ParseMode.HTML)
@@ -292,9 +293,9 @@ def help_button(update, context):
             module = mod_match.group(1)
             text = (
                 "» *ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ꜰᴏʀ* *{}* :\n".format(
-                    HELPABLE[module].__mod_name__
+                    HELPABLE[module].mod_name
                 )
-                + HELPABLE[module].__help__
+                + HELPABLE[module].help
             )
             query.message.edit_text(
                 text=text,
@@ -345,7 +346,7 @@ def Dazai_about_callback(update: Update, context: CallbackContext):
     if query.data == "dazai_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-            text=f"*ʜᴇʏ  𝙱𝙰𝙱𝚈,*🥀\n  *ᴛʜɪs ɪs {BOT_NAME}*"
+            text=f"*Hᴇʏ Hᴏɴᴇʏ,*🥀\n  *ᴛʜɪs ɪs {BOT_NAME}*"
             "\n*ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ  𝙱𝙰𝙱𝚈 ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴄᴀᴍᴍᴇʀꜱ ᴀɴᴅ ꜱᴘᴀᴍᴍᴇʀꜱ.*"
             "\n*ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ sǫʟᴀʟᴄʜᴇᴍʏ ᴀɴᴅ ᴍᴏɴɢᴏᴅʙ ᴀs ᴅᴀᴛᴀʙᴀsᴇ.*"
             "\n\n────────────────────"
@@ -353,7 +354,8 @@ def Dazai_about_callback(update: Update, context: CallbackContext):
             f"\n*➻ ᴜsᴇʀs »* {sql.num_users()}"
             f"\n*➻ ᴄʜᴀᴛs »* {sql.num_chats()}"
             "\n────────────────────"
-            "\n\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ."
+
+"\n\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ."
             "\n➲  ɪ ʜᴀᴠᴇ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ꜱʏꜱᴛᴇᴍ."
             "\n➲  ɪ ᴄᴀɴ ɢʀᴇᴇᴛ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀɴᴅ ᴇᴠᴇɴ ꜱᴇᴛ ᴀ ɢʀᴏᴜᴘ'ꜱ ʀᴜʟᴇꜱ."
             "\n➲  ɪ ᴄᴀɴ ᴡᴀʀɴ ᴜꜱᴇʀꜱ ᴜɴᴛɪʟ ᴛʜᴇʏ ʀᴇᴀᴄʜ ᴍᴀx ᴡᴀʀɴꜱ, ᴡɪᴛʜ ᴇᴀᴄʜ ᴘʀᴇᴅᴇꜰɪɴᴇᴅ ᴀᴄᴛɪᴏɴꜱ ꜱᴜᴄʜ ᴀꜱ ʙᴀɴ, ᴍᴜᴛᴇ, ᴋɪᴄᴋ, ᴇᴛᴄ."
@@ -365,7 +367,7 @@ def Dazai_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", callback_data="JabamiYumekoSupport"
+                            text="sᴜᴩᴩᴏʀᴛ", callback_data="Ahjin_sprt"
                         ),
                         InlineKeyboardButton(
                             text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"
@@ -373,7 +375,7 @@ def Dazai_about_callback(update: Update, context: CallbackContext):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="𝙷𝙾𝙽𝙴𝚈", url=f"tg://user?id={OWNER_ID}"
+                            text="Hᴏɴᴇʏ", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
                             text="sᴏᴜʀᴄᴇ",
@@ -386,7 +388,7 @@ def Dazai_about_callback(update: Update, context: CallbackContext):
                 ]
             ),
         )
-    elif query.data == "JabamiYumekoSupport":
+    elif query.data == "Ahjin_sprt":
         query.message.edit_text(
             text="*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ʜᴇʟᴩ ᴀɴᴅ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍᴇ 𝙷𝙾𝙽𝙴𝚈*"
             f"\n\nɪғ ʏᴏᴜ ғᴏᴜɴᴅ ᴀɴʏ ʙᴜɢ ɪɴ {BOT_NAME} ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ɢɪᴠᴇ ғᴇᴇᴅʙᴀᴄᴋ ᴀʙᴏᴜᴛ ᴛʜᴇ {BOT_NAME}, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴀᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ.",
@@ -398,7 +400,7 @@ def Dazai_about_callback(update: Update, context: CallbackContext):
                             text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/HorikitaUpdate"
                         ),
                     ],
                     [
@@ -443,7 +445,6 @@ def Source_about_callback(update: Update, context: CallbackContext):
 
 
 *ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ :* [ɢɪᴛʜᴜʙ](https://github.com/Anonymous-068/DazaiRobot)
-
 
 {BOT_NAME} ɪs ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ [ᴍɪᴛ ʟɪᴄᴇɴsᴇ](https://github.com/adi6804/DazaiRobot/blob/main/LICENSE).
 © 2022 - 2023 | [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
@@ -516,9 +517,9 @@ def get_help(update: Update, context: CallbackContext):
         module = args[1].lower()
         text = (
             "Here is the available help for the *{}* module:\n".format(
-                HELPABLE[module].__mod_name__
+                HELPABLE[module].mod_name
             )
-            + HELPABLE[module].__help__
+            + HELPABLE[module].help
         )
         send_help(
             chat.id,
@@ -536,7 +537,7 @@ def send_settings(chat_id, user_id, user=False):
     if user:
         if USER_SETTINGS:
             settings = "\n\n".join(
-                "*{}*:\n{}".format(mod.__mod_name__, mod.__user_settings__(user_id))
+                "*{}*:\n{}".format(mod.mod_name, mod.user_settings(user_id))
                 for mod in USER_SETTINGS.values()
             )
             dispatcher.bot.send_message(
@@ -552,7 +553,7 @@ def send_settings(chat_id, user_id, user=False):
                 parse_mode=ParseMode.MARKDOWN,
             )
 
-    else:
+else:
         if CHAT_SETTINGS:
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
@@ -587,8 +588,8 @@ def settings_button(update: Update, context: CallbackContext):
             module = mod_match.group(2)
             chat = bot.get_chat(chat_id)
             text = "*{}* has the following settings for the *{}* module:\n\n".format(
-                escape_markdown(chat.title), CHAT_SETTINGS[module].__mod_name__
-            ) + CHAT_SETTINGS[module].__chat_settings__(chat_id, user.id)
+                escape_markdown(chat.title), CHAT_SETTINGS[module].mod_name
+            ) + CHAT_SETTINGS[module].chat_settings(chat_id, user.id)
             query.message.reply_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
@@ -646,7 +647,8 @@ def settings_button(update: Update, context: CallbackContext):
 
         # ensure no spinny white circle
         bot.answer_callback_query(query.id)
-        query.message.delete()
+
+query.message.delete()
     except BadRequest as excp:
         if excp.message not in [
             "Message is not modified",
@@ -700,7 +702,7 @@ def migrate_chats(update: Update, context: CallbackContext):
 
     LOGGER.info("Migrating from %s, to %s", str(old_chat), str(new_chat))
     for mod in MIGRATEABLE:
-        mod.__migrate__(old_chat, new_chat)
+        mod.migrate(old_chat, new_chat)
 
     LOGGER.info("Successfully migrated!")
     raise DispatcherHandlerStop
@@ -713,13 +715,13 @@ def main():
                 chat_id=f"@{SUPPORT_CHAT}",
                 photo=START_IMG,
                 caption=f"""
-ㅤ{BOT_NAME} ɪs ʙᴀᴄᴋ ᴛᴏ ᴡᴏʀᴋ!
+ㅤIғ I ᴍᴀʏ ʙᴇ sᴏ ʙᴏʟᴅ, ᴅᴇғᴇᴄᴛɪᴠᴇ ᴍᴇʀᴄʜᴀɴᴅɪsᴇ ᴄᴀɴ ᴏғᴛᴇɴ ʙᴇ ғɪxᴇᴅ ᴡɪᴛʜ ᴛʜᴇ sʟɪɢʜᴛᴇsᴛ ᴏғ ᴀʟᴛᴇʀᴀᴛɪᴏɴs. Tʜᴀᴛ ɪs ᴍʏ ғᴇᴇʟɪɴɢ ᴏɴ ᴛʜᴇ ᴍᴀᴛᴛᴇʀ.
 
 ✧•────────────────•✧
-ㅤ❆ ᴘʏᴛʜᴏɴ : `{y()}`
-ㅤ❆ ʟɪʙʀᴀʀʏ : `{telever}`
-ㅤ❆ ᴛᴇʟᴇᴛʜᴏɴ : `{tlhver}`
-ㅤ❆ ᴩʏʀᴏɢʀᴀᴍ : `{pyrover}`
+ㅤ❆ ᴘʏᴛʜᴏɴ : {y()}
+ㅤ❆ ʟɪʙʀᴀʀʏ : {telever}
+ㅤ❆ ᴛᴇʟᴇᴛʜᴏɴ : {tlhver}
+ㅤ❆ ᴩʏʀᴏɢʀᴀᴍ : {pyrover}
 ✧•────────────────•✧""",
                 parse_mode=ParseMode.MARKDOWN,
             )
@@ -762,7 +764,7 @@ def main():
 
     dispatcher.add_error_handler(error_callback)
 
-    LOGGER.info("Using long polling.")
+LOGGER.info("Using long polling.")
     updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True)
 
     if len(argv) not in (1, 3, 4):
@@ -773,7 +775,7 @@ def main():
     updater.idle()
 
 
-if __name__ == "__main__":
+if name == "main":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
