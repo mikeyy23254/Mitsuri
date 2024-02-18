@@ -9,16 +9,16 @@ class Config(object):
 
     DATABASE_URL = ""  # A sql database url from elephantsql.com
 
-    EVENT_LOGS = ()  # Event logs channel to note down important bot level events
+    EVENT_LOGS = (-1001987915872)  # Event logs channel to note down important bot level events
 
-    MONGO_DB_URI = ""  # Get ths value from cloud.mongodb.com
+    MONGO_DB_URI = "mongodb+srv://mikey:mikey@giyu.duescsi.mongodb.net/?retryWrites=true&w=majority"  # Get ths value from cloud.mongodb.com
 
     # Telegraph link of the image which will be shown at start command.
     START_IMG = "https://telegra.ph/file/c9b24b504bda1f0fc54b2.jpg"
 
-    SUPPORT_CHAT = "horikitasupportt"  # Your Telegram support group chat username where your users will go and bother you
+    SUPPORT_CHAT = "ahjin_sprt"  # Your Telegram support group chat username where your users will go and bother you
 
-    TOKEN = ""  # Get bot token from @BotFather on Telegram
+    TOKEN = "6736305499:AAFGqSxwR6U27iVyffsfTXObKOM0M8JMNf4"  # Get bot token from @BotFather on Telegram
 
     TIME_API_KEY = ""  # Get this value from https://timezonedb.com/api
 
