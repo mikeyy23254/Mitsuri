@@ -65,17 +65,3 @@ Press `Ctrl+b` and then `d`
   <img src="https://te.legra.ph/file/af91b1d8501344821fc79.jpg">
 </p>
 
-</details>
-━━━━━━━━━━━━━━━━━━━━
-
-<h3 align="center">
-    『 sᴜᴩᴩᴏʀᴛ 』
-</h3>
-
-<p align="center">
-<a href="https://t.me/horikitasupportt"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
-</p>
-<p align="center">
-<a href="https://t.me/suzunesupportt"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
-</p>
-━━━━━━━━━━━━━━━━━━━━
