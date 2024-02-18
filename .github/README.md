@@ -1,11 +1,11 @@
 ━━━━━━━━━━━━━━━━━━━━
 
 <h2 align="center">
-    ──「  Yumeko ✘ 𝙍𝙊𝘽𝙊𝙏 」──
+    ──「 sᴜᴢᴜɴᴇ  ✘ 𝙍𝙊𝘽𝙊𝙏 」──
 </h2>
 
 
-_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [Yumeko](https://t.me/YumekoXRobot)**_
+_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [𝙎𝙐𝙕𝙐𝙉𝙀](https://t.me/Horikita_Robot)**_
 
 
 <p align="center">
@@ -22,7 +22,7 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [Yumeko](https://t.m
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
-  <img src="https://te.legra.ph/file/0a309569935a48b7f578a.jpg">
+  <img src="https://telegra.ph/file/8f5b8eec158d0e9a34c2a.jpg">
 </p>
 
 <p align="center">
@@ -84,9 +84,9 @@ Press `Ctrl+b` and then `d`
 </h3>
 
 <p align="center">
-<a href="https://telegram.me/axpsupport"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/horikitasupportt"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 <p align="center">
-<a href="https://telegram.me/axpsupport"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/suzunesupportt"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 ━━━━━━━━━━━━━━━━━━━━
