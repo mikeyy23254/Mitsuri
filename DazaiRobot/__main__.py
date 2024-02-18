@@ -144,16 +144,16 @@ for module_name in ALL_MODULES:
         USER_INFO.append(imported_module)
 
 if hasattr(imported_module, "__import_data__"):
-        DATA_IMPORT.append(imported_module)
+    DATA_IMPORT.append(imported_module)
 
-    if hasattr(imported_module, "__export_data__"):
-        DATA_EXPORT.append(imported_module)
+if hasattr(imported_module, "__export_data__"):
+    DATA_EXPORT.append(imported_module)
 
-    if hasattr(imported_module, "__chat_settings__"):
-        CHAT_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
+if hasattr(imported_module, "__chat_settings__"):
+    CHAT_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
 
-    if hasattr(imported_module, "__user_settings__"):
-        USER_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
+if hasattr(imported_module, "__user_settings__"):
+    USER_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
 
 
 # do not async
