@@ -82,7 +82,7 @@ PM_START_TEXT = """
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ❍ *Uptime:* `{}`
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-[➛](https://te.legra.ph/file/7b206ca503ba57ea82f2f.jpg) *ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
+[➛](https://telegra.ph/file/37460ba4380017362f6bf.mp4) *ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
 """
 
 buttons = [
@@ -97,12 +97,12 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="Updates", url=f"https://t.me/Anya_updates"),
+        InlineKeyboardButton(text="Updates", url=f"https://t.me/HorikitaUpdate"),
     ],
 ]
 
 HELP_STRINGS = f"""
-[❃](https://te.legra.ph/file/b0ec925e8446dc0f4e72a.jpg)* {BOT_NAME} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
+[❃](https://telegra.ph/file/157413724f0e7350d15bd.mp4)* {BOT_NAME} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
 
 ➲ /start : ꜱᴛᴀʀᴛꜱ ᴍᴇ | ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ ɪᴛ.
 ➲ /help  : ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ꜱᴇᴄᴛɪᴏɴ.
@@ -365,7 +365,7 @@ def Dazai_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", callback_data="axpsupport"
+                            text="sᴜᴩᴩᴏʀᴛ", callback_data="ahjin_sprt"
                         ),
                         InlineKeyboardButton(
                             text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"
@@ -398,7 +398,7 @@ def Dazai_about_callback(update: Update, context: CallbackContext):
                             text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/HorikitaUpdate"
                         ),
                     ],
                     [
@@ -713,7 +713,7 @@ def main():
                 chat_id=f"@{SUPPORT_CHAT}",
                 photo=START_IMG,
                 caption=f"""
-ㅤ{BOT_NAME} ɪs ʙᴀᴄᴋ ᴛᴏ ᴡᴏʀᴋ!
+ㅤIғ I ᴍᴀʏ ʙᴇ sᴏ ʙᴏʟᴅ, ᴅᴇғᴇᴄᴛɪᴠᴇ ᴍᴇʀᴄʜᴀɴᴅɪsᴇ ᴄᴀɴ ᴏғᴛᴇɴ ʙᴇ ғɪxᴇᴅ ᴡɪᴛʜ ᴛʜᴇ sʟɪɢʜᴛᴇsᴛ ᴏғ ᴀʟᴛᴇʀᴀᴛɪᴏɴs. Tʜᴀᴛ ɪs ᴍʏ ғᴇᴇʟɪɴɢ ᴏɴ ᴛʜᴇ ᴍᴀᴛᴛᴇʀ.
 
 ✧•────────────────•✧
 ㅤ❆ ᴘʏᴛʜᴏɴ : `{y()}`
