@@ -192,6 +192,34 @@ PAT_STICKERS = (
     "CAACAgQAAxkBAALRXF9Xs6XmIeDbnoL1wiDky0TdX-CvAAKKAQAC1TMzC9A3CtiT2rqVGwQ",
 )
 
+KISS_TEMPLATES = (
+    "{user1} kiss {user2} on the lips.",
+    "*gently kissed {user2}'s lips*.",
+    "*{user1} kissed {user2}'s lips*",
+    "*{user1} kissed {user2}'s lips*",
+    "*{user1} kiss {user2}'s chicks*",
+    "*{user2}'s get kissed on their lips*",
+    "*{user2}'s got free kisses*",
+    "No kiss for {user2}!",
+    "Oh no! We are all out of kiss.",
+    "This is a designated no kiss zone!",
+    "No kiss for {user2}!",
+    "{user1} kissed {user2} 💗!",
+    "{user2} received one free kiss!",
+    "{user1} kisses {user2} whilst giving a lap pillow",
+    "{user1} kissed {user2}",
+)
+
+KISS_GIFS = (
+    "CgACAgQAAxkBAALRX19Xs7tBdOH1gQwS_rglVRkTbgVYAAKEAgACmQn9UWlyGa_xy9_aGwQ",
+    "CgACAgEAAxkBAALRYF9Xs8EnhsDfDpld3ILoqTbzDmwxAAJFAAOJxjlHECanwn69E5QbBA",
+)
+
+KISS_STICKERS = (
+    "CAACAgQAAxkBAALRWV9Xs4HH0XaXfhZe-jWaZoXfs-IsAAJYAwACdDgSEHYOt4KvL02oGwQ",
+    "CAACAgQAAxkBAALRXF9Xs6XmIeDbnoL1wiDky0TdX-CvAAKKAQAC1TMzC9A3CtiT2rqVGwQ",
+)
+
 PING_STRING = ("ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ! 🖤",)
 
 ITEMS = (
