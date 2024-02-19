@@ -18,7 +18,7 @@ class Config(object):
 
     SUPPORT_CHAT = "ahjin_sprt"  # Your Telegram support group chat username where your users will go and bother you
 
-    TOKEN = "6736305499:AAFGqSxwR6U27iVyffsfTXObKOM0M8JMNf4"  # Get bot token from @BotFather on Telegram
+    TOKEN = ""  # Get bot token from @BotFather on Telegram
 
     TIME_API_KEY = ""  # Get this value from https://timezonedb.com/api
 
