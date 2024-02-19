@@ -129,6 +129,47 @@ def pat(update: Update, context: CallbackContext):
         reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
 
+def kiss(update: Update, context: CallbackContext):
+    bot = context.bot
+    args = context.args
+    message = update.effective_message
+
+    reply_to = message.reply_to_message if message.reply_to_message else message
+
+    curr_user = html.escape(message.from_user.first_name)
+    user_id = extract_user(message, args)
+
+    if user_id:
+        kissed_user = bot.get_chat(user_id)
+        user1 = curr_user
+        user2 = html.escape(kissed_user.first_name)
+
+    else:
+        user1 = bot.first_name
+        user2 = curr_user
+
+    kiss_type = random.choice(("Text", "Gif", "Sticker"))
+    if kiss_type == "Gif":
+        try:
+            temp = random.choice(fun_strings.KISS_GIFS)
+            reply_to.reply_animation(temp)
+        except BadRequest:
+            kiss_type = "Text"
+
+    if kiss_type == "Sticker":
+        try:
+            temp = random.choice(fun_strings.KISS_STICKERS)
+            reply_to.reply_sticker(temp)
+        except BadRequest:
+            kiss_type = "Text"
+
+    if kiss_type == "Text":
+        temp = random.choice(fun_strings.KISS_TEMPLATES)
+        reply = temp.format(user1=user1, user2=user2)
+        reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
+
+
+
 def roll(update: Update, context: CallbackContext):
     update.message.reply_text(random.choice(range(1, 7)))
 
@@ -222,6 +263,7 @@ __help__ = """
  ❍ /weebify <text>*:* returns a weebified text
  ❍ /sanitize*:* always use this before /pat or any contact
  ❍ /pat*:* pats a user, or get patted
+ ❍ /kiss*:* kiss a user, or get kissed
  ❍ /8ball*:* predicts using 8ball method 
 """
 
@@ -229,6 +271,7 @@ SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=Tru
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs, run_async=True)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap, run_async=True)
 PAT_HANDLER = DisableAbleCommandHandler("pat", pat, run_async=True)
+KISS_HANDLER = DisableAbleCommandHandler("kiss", kiss, run_async=True)
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll, run_async=True)
 TOSS_HANDLER = DisableAbleCommandHandler("toss", toss, run_async=True)
 SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug, run_async=True)
@@ -244,6 +287,7 @@ dispatcher.add_handler(SANITIZE_HANDLER)
 dispatcher.add_handler(RUNS_HANDLER)
 dispatcher.add_handler(SLAP_HANDLER)
 dispatcher.add_handler(PAT_HANDLER)
+dispatcher.add_handler(KISS_HANDLER)
 dispatcher.add_handler(ROLL_HANDLER)
 dispatcher.add_handler(TOSS_HANDLER)
 dispatcher.add_handler(SHRUG_HANDLER)
@@ -265,6 +309,7 @@ __command_list__ = [
     "decide",
     "table",
     "pat",
+    "kiss",
     "sanitize",
     "shout",
     "weebify",
@@ -274,6 +319,7 @@ __handlers__ = [
     RUNS_HANDLER,
     SLAP_HANDLER,
     PAT_HANDLER,
+    KISS_HANDLER,
     ROLL_HANDLER,
     TOSS_HANDLER,
     SHRUG_HANDLER,
