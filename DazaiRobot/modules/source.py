@@ -17,7 +17,7 @@ async def repo(_, message: Message):
 
 ɪ ᴀᴍ [{BOT_NAME}](https://t.me/{BOT_USERNAME})**
 
-**» ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ :** Levi
+**» ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ :** Hᴏʀɪᴋɪᴛᴀ Dᴇᴠs
 **» ᴩʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{y()}`
 **» ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{o}` 
 **» ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{s}` 
@@ -26,7 +26,7 @@ async def repo(_, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/LeviAckerman1709",),
+                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/HorikitaUpdate/7",),
                     InlineKeyboardButton(
                         "sᴏᴜʀᴄᴇ",
                         url="https://telegra.ph/file/99e41098f601cd518e101.mp4",
