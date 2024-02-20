@@ -255,17 +255,17 @@ def info(update: Update, context: CallbackContext):
         text += f"\n\n<b>ʜᴇᴀʟᴛʜ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     if user.id == OWNER_ID:
-        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs 𝙼𝚈 <b>Honey</b>.\n"
+        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴍʏ <b>CREATOR</b>.\n"
     elif user.id in DEV_USERS:
-        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs <b>Sweetheart</b>.\n"
+        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴍʏ <b>DEV</b>.\n"
     elif user.id in DRAGONS:
-        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs <b>Dear Ones</b>.\n"
+        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴍʏ <b>SUDO USER</b>.\n"
     elif user.id in DEMONS:
-        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs <b>Loved Ones</b>.\n"
+        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴍʏ <b>DEMON USER</b>.\n"
     elif user.id in TIGERS:
-        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs <b>Darling</b>.\n"
+        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs <b>TIGER</b>.\n"
     elif user.id in WOLVES:
-        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs <b>Baby</b>.\n"
+        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs <b>WOLF</b>.\n"
     try:
         user_member = chat.get_member(user.id)
         if user_member.status == "administrator":
@@ -300,10 +300,10 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/YumekoUpdate/7"
+                                "ʜᴇᴀʟᴛʜ", url="https://t.me/HorikitaUpdate/4"
                             ),
                             InlineKeyboardButton(
-                                "ᴅɪꜱᴀꜱᴛᴇʀ", url="https://t.me/YumekoUpdate/7"
+                                "ᴅɪꜱᴀꜱᴛᴇʀ", url="https://t.me/HorikitaUpdate/4"
                             ),
                         ],
                     ]
@@ -386,7 +386,7 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>💋 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛs:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>💗 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛs:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_text(result, parse_mode=ParseMode.HTML)
 
