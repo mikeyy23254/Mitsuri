@@ -12,7 +12,7 @@ VIDEO  = "https://telegra.ph/file/13f087d75c66ca1759ef4.mp4"
 @pbot.on_message(filters.command("alive"))
 async def awake(_, message: Message):
     TEXT = f"**Hᴇʏ Hᴏɴᴇʏ {message.from_user.mention},\n\nɪ ᴀᴍ {BOT_NAME}**\n━━━━━━━━━━━━━━━━━━━━━━\n\n"
-    TEXT += f"» **ᴍʏ ʜᴏɴᴇʏ:** [Mikey](tg://user?id={OWNER_ID})\n\n"
+    TEXT += f"» **ᴍʏ ʜᴏɴᴇʏ:** [Mɪᴋᴇʏ](tg://user?id={OWNER_ID})\n\n"
     TEXT += f"» **ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ:** `{telever}` \n\n"
     TEXT += f"» **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `{tlhver}` \n\n"
     TEXT += f"» **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ:** `{pyrover}| \n━━━━━━━━━━━━━━━━━━━━━\n\n"
