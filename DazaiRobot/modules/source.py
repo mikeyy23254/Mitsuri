@@ -26,7 +26,7 @@ async def repo(_, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/HorikitaUpdate/7",),
+                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Mitsuri_Updates/11",),
                     InlineKeyboardButton(
                         "sᴏᴜʀᴄᴇ",
                         url="https://telegra.ph/file/99e41098f601cd518e101.mp4",
