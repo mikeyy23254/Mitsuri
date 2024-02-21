@@ -5,13 +5,13 @@
 </h2>
 
 
-_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [𝙎𝙐𝙕𝙐𝙉𝙀](https://t.me/Horikita_Robot)**_
+_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [𝙎𝙐𝙕𝙐𝙉𝙀](https://t.me/Mitsuri_Robot)**_
 
 
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
-  <img src="https://telegra.ph/file/8f5b8eec158d0e9a34c2a.jpg">
+  <img src="https://telegra.ph/file/ad2b38da713ceb2f6085b.jpg">
 </p>
 
 <p align="center">
@@ -62,6 +62,6 @@ Press `Ctrl+C` when you're done with editing config and `:wq` to save the config
 Press `Ctrl+b` and then `d`
 
 <p align="center">
-  <img src="https://te.legra.ph/file/af91b1d8501344821fc79.jpg">
+  <img src="https://telegra.ph/file/ad2b38da713ceb2f6085b.jpg">
 </p>
 
