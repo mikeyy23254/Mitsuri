@@ -14,7 +14,7 @@ class Config(object):
     MONGO_DB_URI = "mongodb+srv://mikey:mikey@giyu.duescsi.mongodb.net/?retryWrites=true&w=majority"  # Get ths value from cloud.mongodb.com
 
     # Telegraph link of the image which will be shown at start command.
-    START_IMG = "https://telegra.ph/file/c9b24b504bda1f0fc54b2.jpg"
+    START_IMG = "https://telegra.ph/file/ad2b38da713ceb2f6085b.jpg"
 
     SUPPORT_CHAT = "ahjin_sprt"  # Your Telegram support group chat username where your users will go and bother you
 
