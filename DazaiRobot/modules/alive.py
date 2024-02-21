@@ -15,7 +15,7 @@ async def awake(_, message: Message):
     TEXT += f"» **ᴍʏ ᴅᴇᴠs:** [ᴅᴇᴠs](https://t.me/Mitsuri_Updates/11)\n\n"
     TEXT += f"» **ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ:** `{telever}` \n\n"
     TEXT += f"» **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `{tlhver}` \n\n"
-    TEXT += f"» **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ:** `{pyrover}| \n━━━━━━━━━━━━━━━━━━━━━\n\n"
+    TEXT += f"» **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ:** `{pyrover}` \n━━━━━━━━━━━━━━━━━━━━━\n\n"
     BUTTON = [
         [
             InlineKeyboardButton("ʜᴇʟᴘ", url=f"https://t.me/{BOT_USERNAME}?start=help"),
