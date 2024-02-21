@@ -154,14 +154,14 @@ def kiss(update: Update, context: CallbackContext):
             temp = random.choice(fun_strings.KISS_GIFS)
             reply_to.reply_animation(temp)
         except BadRequest:
-            kiss_type = "Text"
+            kiss_type = "Sticker"
 
     if kiss_type == "Sticker":
         try:
             temp = random.choice(fun_strings.KISS_STICKERS)
             reply_to.reply_sticker(temp)
         except BadRequest:
-            kiss_type = "Text"
+            kiss_type = "Gif"
 
     if kiss_type == "Text":
         temp = random.choice(fun_strings.KISS_TEMPLATES)
@@ -194,14 +194,14 @@ def hug(update: Update, context: CallbackContext):
             temp = random.choice(fun_strings.HUG_GIFS)
             reply_to.reply_animation(temp)
         except BadRequest:
-            hug_type = "Text"
+            hug_type = "Sticker"
 
     if hug_type == "Sticker":
         try:
             temp = random.choice(fun_strings.HUG_STICKERS)
             reply_to.reply_sticker(temp)
         except BadRequest:
-            hug_type = "Text"
+            hug_type = "Gif"
 
     if hug_type == "Text":
         temp = random.choice(fun_strings.HUG_TEMPLATES)
