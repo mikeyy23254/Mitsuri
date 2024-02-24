@@ -19,8 +19,8 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-sudo = 6171176459
-BOT_ID = 6299213020
+sudo = 6264769753
+BOT_ID = 6561748036
 CMD_HELP = '/ ! .'
 
 
