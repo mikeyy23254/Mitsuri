@@ -170,3 +170,5 @@ async def get_users(show):
 
     os.remove("userslist.txt")
 
+
+__mod_name__ = "Unbanll"
