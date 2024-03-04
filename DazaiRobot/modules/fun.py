@@ -128,6 +128,44 @@ def pat(update: Update, context: CallbackContext):
         reply = temp.format(user1=user1, user2=user2)
         reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
+def kawai(update: Update, context: CallbackContext):
+    bot = context.bot
+    args = context.args
+    message = update.effective_message
+
+    reply_to = message.reply_to_message if message.reply_to_message else message
+
+    curr_user = html.escape(message.from_user.first_name)
+    user_id = extract_user(message, args)
+
+    if user_id:
+        kawaii_user = bot.get_chat(user_id)
+        user1 = curr_user
+        user2 = html.escape(kawaii_user.first_name)
+
+    else:
+        user1 = bot.first_name
+        user2 = curr_user
+
+    kawai_type = random.choice(("Text", "Gif", "Sticker"))
+    if kawai_type == "Gif":
+        try:
+            temp = random.choice(fun_strings.KAWAI_GIFS)
+            reply_to.reply_animation(temp)
+        except BadRequest:
+            hug_type = "Sticker"
+
+    if kawai_type == "Sticker":
+        try:
+            temp = random.choice(fun_strings.KAWAI_STICKERS)
+            reply_to.reply_sticker(temp)
+        except BadRequest:
+            kawai_type = "Gif"
+
+    if kawai_type == "Text":
+        temp = random.choice(fun_strings.KAWAI_TEMPLATES)
+        reply = temp.format(user1=user1, user2=user2)
+        reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
 def kiss(update: Update, context: CallbackContext):
     bot = context.bot
@@ -382,6 +420,7 @@ __help__ = """
  ❍ /bam*:* troll a user, or get trolled
  ❍ /gbam*:* troll a user, or get trolled
  ❍ /kiss*:* kiss a user, or get kissed
+ ❍ /kawai*:* kawaii
  ❍ /hug*:* hug a user, or get hugged
  ❍ /8ball*:* predicts using 8ball method 
 """
@@ -391,6 +430,7 @@ RUNS_HANDLER = DisableAbleCommandHandler("runs", runs, run_async=True)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap, run_async=True)
 PAT_HANDLER = DisableAbleCommandHandler("pat", pat, run_async=True)
 KISS_HANDLER = DisableAbleCommandHandler("kiss", kiss, run_async=True)
+KAWAI_HANDLER = DisableAbleCommandHandler("kawai", kawai, run_async=True)
 HUG_HANDLER = DisableAbleCommandHandler("hug", hug, run_async=True)
 BAM_HANDLER = DisableAbleCommandHandler("bam", bam, run_async=True)
 GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=True)
@@ -410,6 +450,7 @@ dispatcher.add_handler(RUNS_HANDLER)
 dispatcher.add_handler(SLAP_HANDLER)
 dispatcher.add_handler(PAT_HANDLER)
 dispatcher.add_handler(KISS_HANDLER)
+dispatcher.add_handler(KAWAI_HANDLER)
 dispatcher.add_handler(HUG_HANDLER)
 dispatcher.add_handler(BAM_HANDLER)
 dispatcher.add_handler(GBAM_HANDLER)
@@ -434,6 +475,7 @@ __command_list__ = [
     "decide",
     "table",
     "pat",
+    "kawai",
     "hug",
     "kiss",
     "bam",
@@ -448,6 +490,7 @@ __handlers__ = [
     SLAP_HANDLER,
     PAT_HANDLER,
     KISS_HANDLER,
+    KAWAI_HANDLER,
     HUG_HANDLER,
     BAM_HANDLER,
     GBAM_HANDLER,
