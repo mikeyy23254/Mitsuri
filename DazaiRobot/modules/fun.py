@@ -402,6 +402,9 @@ def table(update: Update, context: CallbackContext):
     )
     reply_text(random.choice(fun_strings.TABLE))
 
+def neko(update: Update, context: CallbackContext):
+    update.effective_message.reply_video(random.choice(fun_strings.NEKO))
+
 
 __help__ = """
  ❍ /runs*:* reply a random string from an array of replies
