@@ -253,7 +253,8 @@ BAM_STICKERS = (
 
 GBAM_TEMPLATES = (
     "On It!! 
-Done Gbanned 😂",   
+Done Gbanned 😂
+Chat affected = 69 of {mention} nigga",   
 )
 
 GBAM_GIFS = (
