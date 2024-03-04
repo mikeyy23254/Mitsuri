@@ -531,5 +531,8 @@ TABLE = (
     "(╯°□°）╯彡 ┻━┻",
     "I ran out of tables, will order more.",
     "Go do some work instead of flippin tables.",
-NEKO=
+NEKO = ( 
+https://te.legra.ph/file/55fa828541d2e5b4e468a.mp4, 
+)
+
 )
