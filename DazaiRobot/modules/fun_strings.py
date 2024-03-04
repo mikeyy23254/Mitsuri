@@ -234,6 +234,21 @@ HUG_STICKERS = (
     "CAACAgUAAx0CYhkUPAABDsxnZdTkoZCjGiEjhm42b5ndEPmpTucAAjMPAAIvt2BXeY8o_qqquWM0BA",
 )
 
+BAM_TEMPLATES = (
+    "{user1} banned {user2} nigga 🤡", 
+    "*{user2} nigga got banned.. Reason :- Chapri 🤣😂",   
+)
+
+BAM_GIFS = (
+    "CgACAgQAAx0Cfb7WMQABBZFdZeWNM_bfi9B9cANeApA-cn5uLKUAAvECAAJhDx1T4pNPAAFXFzHFNAQ",
+    "CgACAgQAAx0Cfb7WMQABBZFdZeWNM_bfi9B9cANeApA-cn5uLKUAAvECAAJhDx1T4pNPAAFXFzHFNAQ",
+)
+
+BAM_STICKERS = (
+    "CAACAgUAAx0Cfb7WMQABBZFVZeWNBnhtRAIWccZsRhRT_03EU-cAAtALAAJvDeFVCpmR16vxnEk0BA",
+    "CAACAgUAAx0Cfb7WMQABBZFZZeWNISBCn6ERnRGnne4qw7W56NAAAgoCAALk9GhWh-x8jwh90IE0BA",
+)
+
 PING_STRING = ("ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ! 🖤",)
 
 ITEMS = (
