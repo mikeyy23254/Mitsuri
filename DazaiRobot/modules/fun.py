@@ -403,12 +403,13 @@ def table(update: Update, context: CallbackContext):
     reply_text(random.choice(fun_strings.TABLE))
 
 def neko(update: Update, context: CallbackContext):
-     reply_text = (
- update.effective_message.reply_to_message.reply_video
+    reply_text = (
+        update.effective_message.reply_to_message.reply_video
         if update.effective_message.reply_to_message
         else update.effective_message.reply_video
     )
     reply_video(random.choice(fun_strings.NEKO))
+
 
 
 __help__ = """
