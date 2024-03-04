@@ -446,6 +446,7 @@ DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide, run_async=True)
 EIGHTBALL_HANDLER = DisableAbleCommandHandler("8ball", eightball, run_async=True)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table, run_async=True)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout, run_async=True)
+NEKO_HANDLER = DisableAbleCommandHandler("neko", neko, run_async=True)
 
 dispatcher.add_handler(SHOUT_HANDLER)
 dispatcher.add_handler(SANITIZE_HANDLER)
@@ -465,6 +466,7 @@ dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
+dispatcher.add_handler(NEKO_HANDLER)
 
 __mod_name__ = "Fᴜɴ​"
 __command_list__ = [
@@ -487,6 +489,7 @@ __command_list__ = [
     "shout",
     "weebify",
     "8ball",
+    "neko",
 ]
 __handlers__ = [
     RUNS_HANDLER,
@@ -507,4 +510,5 @@ __handlers__ = [
     SANITIZE_HANDLER,
     SHOUT_HANDLER,
     EIGHTBALL_HANDLER,
+    NEKO_HANDLER,
 ]
