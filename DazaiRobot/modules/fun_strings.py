@@ -234,6 +234,25 @@ HUG_STICKERS = (
     "CAACAgUAAx0CYhkUPAABDsxnZdTkoZCjGiEjhm42b5ndEPmpTucAAjMPAAIvt2BXeY8o_qqquWM0BA",
 )
 
+KAWAI_TEMPLATES = (
+    "KAWAIII 🥰🥹",
+    "MEOWW!!🥰🥹",    
+)
+
+KAWAI_GIFS = (
+    "CgACAgQAAxkBAAJCzGXllMdV5XdHpx_l6sAgNcy-EBybAAJjAwACeRPUUDijSgm9h14xNAQ",
+    "CgACAgQAAxkBAAJCzGXllMdV5XdHpx_l6sAgNcy-EBybAAJjAwACeRPUUDijSgm9h14xNAQ",
+)
+
+KAWAI_STICKERS = (
+    "CAACAgUAAxkBAAJCwWXllAkYR8T75qWTfDHi-1JYK8FnAAINAwAC_fCpVusuqJXd6_lwNAQ",
+    "CAACAgUAAxkBAAJCvmXllAH7EF0lgq0llG3nn4A6YzOgAAImAwACDemwVvl_ReQhyVlmNAQ",
+
+"CAACAgUAAxkBAAJCvWXlk_l6OL5ihnb0uRy90ZfCwWYQAAJPAgAC9VawVjJJuyM3XRwONAQ",
+
+"CAACAgUAAxkBAAJCvGXlk_YOAkHYFlW2Esmofr-A6X4eAAI3AgAC_gSxVuVBJkXi-t2SNAQ",
+)
+
 BAM_TEMPLATES = (
     "{user1} banned {user2} nigga 🤡", 
     "*{user2} nigga got banned.. Reason :- Chapri 🤣😂",   
