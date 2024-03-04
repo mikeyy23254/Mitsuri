@@ -531,4 +531,5 @@ TABLE = (
     "(╯°□°）╯彡 ┻━┻",
     "I ran out of tables, will order more.",
     "Go do some work instead of flippin tables.",
+NEKO=
 )
