@@ -533,8 +533,4 @@ TABLE = (
     "Go do some work instead of flippin tables.",
 )
 
-NEKO = ( 
-"https://te.legra.ph/file/55fa828541d2e5b4e468a.mp4", 
-) 
 
-)
