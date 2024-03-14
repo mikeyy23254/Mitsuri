@@ -253,6 +253,11 @@ KAWAI_STICKERS = (
 "CAACAgUAAxkBAAJCvGXlk_YOAkHYFlW2Esmofr-A6X4eAAI3AgAC_gSxVuVBJkXi-t2SNAQ",
 )
 
+BOYPFP_STICKER = (
+ "CAACAgUAAx0CZ6jnnwABAQMNZfMSTqjuHlvJjayrF39NWqDL930AAv8MAALUvNhVB9S9iDMYtKQ0BA", 
+)
+
+
 BAM_TEMPLATES = (
     "{user1} banned {user2} nigga 🤡", 
     "*{user2} nigga got banned.. Reason :- Chapri 🤣😂",   
