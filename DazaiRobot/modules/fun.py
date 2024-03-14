@@ -338,7 +338,7 @@ def boypfp(update: Update, context: CallbackContext):
     user_id = extract_user(message, args)
 
     if user_id:
-        pfp_user = bot.get_chat(user_id)
+        boypfp_user = bot.get_chat(user_id)
         user1 = curr_user
         user2 = html.escape(boypfp_user.first_name)
 
@@ -346,10 +346,10 @@ def boypfp(update: Update, context: CallbackContext):
         user1 = bot.first_name
         user2 = curr_user
 
-    boypfp_type = random.choice(("Sticker"))
-    if boypfp_type == "Sticker":
+    boypfp_type = random.choice(("Text", "Gif", "Sticker"))
+    if boypfp_type == "Gif":
         try:
-            temp = random.choice(fun_strings.BOYPFP_STICKERS)
+            temp = random.choice(fun_strings.BOYPFP_GIFS)
             reply_to.reply_animation(temp)
         except BadRequest:
             boypfp_type = "Sticker"
@@ -361,8 +361,8 @@ def boypfp(update: Update, context: CallbackContext):
         except BadRequest:
             boypfp_type = "Sticker"
 
-    if boypfp_type == "Sticker":
-        temp = random.choice(fun_strings.BOYPFP_STICKERS)
+    if boypfp_type == "Text":
+        temp = random.choice(fun_strings.BOYPFP_TEMPLATES)
         reply = temp.format(user1=user1, user2=user2)
         reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
@@ -458,7 +458,7 @@ __help__ = """
  ❍ /sanitize*:* always use this before /pat or any contact
  ❍ /pat*:* pats a user, or get patted
  ❍ /bam*:* troll a user, or get trolled
- ❍ /boypfp*:* to get boys aesthetic pfps through stickers
+ ❍ /boypfp*:* to get boys aesthetic pfps through stickers and Channel
  ❍ /gbam*:* troll a user, or get trolled
  ❍ /kiss*:* kiss a user, or get kissed
  ❍ /kawai*:* kawaii
