@@ -327,6 +327,45 @@ def gbam(update: Update, context: CallbackContext):
 def roll(update: Update, context: CallbackContext):
     update.message.reply_text(random.choice(range(1, 7)))
 
+def boypfp(update: Update, context: CallbackContext):
+    bot = context.bot
+    args = context.args
+    message = update.effective_message
+
+    reply_to = message.reply_to_message if message.reply_to_message else message
+
+    curr_user = html.escape(message.from_user.first_name)
+    user_id = extract_user(message, args)
+
+    if user_id:
+        pfp_user = bot.get_chat(user_id)
+        user1 = curr_user
+        user2 = html.escape(boypfp_user.first_name)
+
+    else:
+        user1 = bot.first_name
+        user2 = curr_user
+
+    boypfp_type = random.choice(("Sticker"))
+    if boypfp_type == "Sticker":
+        try:
+            temp = random.choice(fun_strings.BOYPFP_STICKERS)
+            reply_to.reply_animation(temp)
+        except BadRequest:
+            boypfp_type = "Sticker"
+
+    if boypfp_type == "Sticker":
+        try:
+            temp = random.choice(fun_strings.BOYPFP_STICKERS)
+            reply_to.reply_sticker(temp)
+        except BadRequest:
+            boypfp_type = "Sticker"
+
+    if boypfp_type == "Sticker":
+        temp = random.choice(fun_strings.BOYPFP_STICKERS)
+        reply = temp.format(user1=user1, user2=user2)
+        reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
+
 
 def shout(update: Update, context: CallbackContext):
     args = context.args
@@ -419,6 +458,7 @@ __help__ = """
  ❍ /sanitize*:* always use this before /pat or any contact
  ❍ /pat*:* pats a user, or get patted
  ❍ /bam*:* troll a user, or get trolled
+ ❍ /boypfp*:* to get boys aesthetic pfps through stickers
  ❍ /gbam*:* troll a user, or get trolled
  ❍ /kiss*:* kiss a user, or get kissed
  ❍ /kawai*:* kawaii
@@ -435,6 +475,7 @@ KAWAI_HANDLER = DisableAbleCommandHandler("kawai", kawai, run_async=True)
 HUG_HANDLER = DisableAbleCommandHandler("hug", hug, run_async=True)
 BAM_HANDLER = DisableAbleCommandHandler("bam", bam, run_async=True)
 GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=True)
+BOYPFP_HANDLER = DisableAbleCommandHandler("boypfp", boypfp, run_async=True)
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll, run_async=True)
 TOSS_HANDLER = DisableAbleCommandHandler("toss", toss, run_async=True)
 SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug, run_async=True)
@@ -455,6 +496,7 @@ dispatcher.add_handler(KAWAI_HANDLER)
 dispatcher.add_handler(HUG_HANDLER)
 dispatcher.add_handler(BAM_HANDLER)
 dispatcher.add_handler(GBAM_HANDLER)
+dispatcher.add_handler(BOYPFP_HANDLER)
 dispatcher.add_handler(ROLL_HANDLER)
 dispatcher.add_handler(TOSS_HANDLER)
 dispatcher.add_handler(SHRUG_HANDLER)
@@ -478,6 +520,7 @@ __command_list__ = [
     "table",
     "pat",
     "kawai",
+    "boypfp",
     "hug",
     "kiss",
     "bam",
@@ -496,6 +539,7 @@ __handlers__ = [
     HUG_HANDLER,
     BAM_HANDLER,
     GBAM_HANDLER,
+    BOYPFP_HANDLER,
     ROLL_HANDLER,
     TOSS_HANDLER,
     SHRUG_HANDLER,
