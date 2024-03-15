@@ -254,7 +254,8 @@ KAWAI_STICKERS = (
 )
 
 BOYPFP_TEMPLATES = (
-    "Want Aesthetic Pfps then join :- @PfpArena",    
+    "Want Aesthetic Pfps then join :- @PfpArena",  
+  "https://telegra.ph/file/a549be101e2a9184f84e3.png"  
 )
 
 BOYPFP_GIFS = (
