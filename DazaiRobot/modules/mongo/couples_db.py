@@ -1,17 +1,15 @@
-from typing import Dict, Union
+from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 
-from pymongo import MongoClient
+from DazaiRobot import MONGO_DB_URI
 
-from DazaiRobot import DB_NAME, MONGO_DB_URI
-
-client = MongoClient(MONGO_DB_URI)
-db = client[DB_NAME]
+mongo = MongoCli(MONGO_DB_URI)
+db = mongo.FallenRobot
 
 coupledb = db.couple
 
 
 async def _get_lovers(chat_id: int):
-    lovers = coupledb.find_one({"chat_id": chat_id})
+    lovers = await coupledb.find_one({"chat_id": chat_id})
     if lovers:
         lovers = lovers["couple"]
     else:
@@ -30,5 +28,8 @@ async def get_couple(chat_id: int, date: str):
 async def save_couple(chat_id: int, date: str, couple: dict):
     lovers = await _get_lovers(chat_id)
     lovers[date] = couple
-    coupledb.update_one({"chat_id": chat_id}, {"$set": {"couple": lovers}}, upsert=True)
-
+    await coupledb.update_one(
+        {"chat_id": chat_id},
+        {"$set": {"couple": lovers}},
+        upsert=True,
+    )
