@@ -5,7 +5,7 @@ from pyrogram import filters
 from pyrogram.enums import ChatType
 
 from DazaiRobot import pbot
-from DazaiRobot.modules.mongo.couples_db import get_couple,save_couple,del_couple 
+from DazaiRobot.modules.mongo.couples_db import get_couple,save_couple
 
 # Date and time
 def dt():
