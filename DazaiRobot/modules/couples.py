@@ -3,7 +3,7 @@ from datetime import datetime
 
 from pyrogram import filters
 
-from DazaiRobot.modules.mongo.couples_db import get_couple,save_couple,del_couple from DazaiRobot import app
+from DazaiRobot.modules.mongo.couples_db import get_couple,save_couple,del_couple
 
 # <=======================================================================================================>
 
