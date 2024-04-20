@@ -1,6 +1,6 @@
 import requests
 from requests import get 
-from DazaiRobot import app
+from DazaiRobot import pbot as app
 from pyrogram import filters
 from pyrogram.types import InputMediaPhoto
 
