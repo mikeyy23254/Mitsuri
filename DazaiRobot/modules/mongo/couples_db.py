@@ -1,4 +1,4 @@
-from DazaiRobot.database import *
+from DazaiRobot.modules.mongo import *
 
 coupledb = dbname["couples"] 
 
