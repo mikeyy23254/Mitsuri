@@ -2,7 +2,6 @@ import random
 import time
 import requests
 from DazaiRobot import pbot as app 
-from config import BOT_USERNAME
 
 from pyrogram.enums import ChatAction, ParseMode
 from pyrogram import filters
