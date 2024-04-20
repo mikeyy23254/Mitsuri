@@ -49,4 +49,5 @@ Python_ARQ
 cloudscraper==1.2.71
 ffmpeg-python==0.2.0
 orjson
+gtts
 Lexica-api
