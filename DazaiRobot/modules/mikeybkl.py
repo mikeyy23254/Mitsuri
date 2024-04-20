@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from gtts import gTTS
-from DazaiRobot import pbot
+from DazaiRobot import pbot as app
 
 
 @app.on_message(filters.command('tts'))
