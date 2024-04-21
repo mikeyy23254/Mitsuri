@@ -62,16 +62,16 @@ async def ctest(_, message):
          try:
             p1 = await app.download_media(photo1.big_file_id, file_name="pfp.png")
          except Exception:
-            p1 = "HuTao/resources/profilepic.jpg"
+            p1 = "DazaiRobot/resources/profilepic.png"
          try:
             p2 = await app.download_media(photo2.big_file_id, file_name="pfp1.png")
          except Exception:
-            p2 = "HuTao/resources/profilepic.jpg"
+            p2 = "DazaiRobot/resources/profilepic.png"
 
          img1 = Image.open(f"{p1}")
          img2 = Image.open(f"{p2}")
 
-         img = Image.open("HuTao/resources/a.png")
+         img = Image.open("DazaiRobot/resources/a.png")
 
          img1 = img1.resize((320,320))
          img2 = img2.resize((320,320))
