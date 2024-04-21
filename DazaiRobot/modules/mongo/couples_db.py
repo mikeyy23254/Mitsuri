@@ -1,10 +1,10 @@
 from DazaiRobot.modules.mongo import *
 from async_pymongo import AsyncClient
 
- client = AsyncClient()
-dbnaam = client["Levi"]
+client = AsyncClient()
+dbname = client["Levi"]
 
-coupledb = dbname["couples"] 
+coupledb = dbname["couples"]
 
 async def _get_lovers(cid: int):
     lovers = await coupledb.find_one({"chat_id": cid})
