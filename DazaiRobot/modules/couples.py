@@ -139,7 +139,7 @@ NEXT COUPLES WILL BE SELECTED ON {tomorrow} !!**
        pass
 
 
-__mod__ = "COUPLES"
+__mod_name__ = "COUPLES"
 __help__ = """
 **» /couples** - Get Todays Couples Of The Group In Interactive View
 """
