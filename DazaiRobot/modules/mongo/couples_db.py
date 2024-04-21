@@ -1,8 +1,7 @@
 from DazaiRobot.modules.mongo import *
 from async_pymongo import AsyncClient
-from DazaiRobot import MONGO_DB_URI 
 
- client = AsyncClient(MONGO_DB_URI)
+ client = AsyncClient()
 dbnaam = client["Levi"]
 
 coupledb = dbname["couples"] 
