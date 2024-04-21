@@ -1,5 +1,6 @@
 from DazaiRobot.modules.mongo import *
 
+ client = AsyncClient()
 dbnaam = client["Levi"]
 
 coupledb = dbname["couples"] 
