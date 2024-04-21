@@ -36,7 +36,7 @@ class temp:
     U_NAME = None
     B_NAME = None
 
-def circle(pfp, size=(200, 200)):
+def circle(pfp, size=(300, 300)):
     pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
@@ -52,16 +52,16 @@ def welcomepic(pic, user, chat, id, uname):
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize(
-        (200, 200)
+        (300, 300)
     ) 
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('DazaiRobot/resources/default.ttf', size=40)
     welcome_font = ImageFont.truetype('DazaiRobot/resources/default.ttf', size=60)
-    draw.text((20, 300), f'NAME: {unidecode(user)}', fill=(500, 500, 500), font=font)
-    draw.text((30, 370), f'ID: {id}', fill=(500, 500, 500), font=font)
-    draw.text((30, 40), f"Welcome to {unidecode(chat)}", fill=(500, 500, 500), font=welcome_font)
-    draw.text((30,430), f"USERNAME : {uname}", fill=(500,500,500),font=font)
-    pfp_position = (400, 120)  
+    draw.text((20, 100), f'NAME: {unidecode(user)}', fill=(100, 100, 100), font=font)
+    draw.text((30, 170), f'ID: {id}', fill=(100, 100, 100), font=font)
+    draw.text((30, 10), f"Welcome to {unidecode(chat)}", fill=(100, 100, 100), font=welcome_font)
+    draw.text((30,200), f"USERNAME : {uname}", fill=(100,100,100),font=font)
+    pfp_position = (300, 100)  
     background.paste(pfp, pfp_position, pfp)  
     background.save(
         f"downloads/welcome#{id}.png"
