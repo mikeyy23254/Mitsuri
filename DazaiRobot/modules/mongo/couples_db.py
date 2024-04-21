@@ -1,7 +1,7 @@
 from DazaiRobot.modules.mongo import *
 
-client = AsyncClient(MONGO_DB_URI)
 dbnaam = client["Levi"]
+
 coupledb = dbname["couples"] 
 
 async def _get_lovers(cid: int):
