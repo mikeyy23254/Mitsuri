@@ -37,3 +37,8 @@ async def chat_gpt(bot, message):
                 await message.reply_text("Error accessing the response.")
     except Exception as e:
         await message.reply_text(f"**á´‡Ê€Ê€á´�Ê€: {e} ")
+
+__mod_name__ = "ᴄʜᴀᴛ ɢᴘᴛ"
+__help__ = """
+~ /ask <*your query*>
+"""
