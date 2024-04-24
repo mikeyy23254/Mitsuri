@@ -50,3 +50,9 @@ TIME TAKEN : {timelog} S**""")
         sent_message = await message.reply_text("ONLY ADMINS CAN USE THIS !")
         await sleep(5)
         await sent_message.delete()
+
+
+__mod_name__ = "Status"
+__help__ = """
+**» /groupstatus** - Check group status 
+"""
