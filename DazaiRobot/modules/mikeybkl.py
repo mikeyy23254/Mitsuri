@@ -9,3 +9,8 @@ def text_to_speech(client, message):
     tts = gTTS(text=text, lang='hi')
     tts.save('speech.mp3')
     client.send_audio(message.chat.id, 'speech.mp3')
+
+__mod_name__ = "TTS"
+__help__ = """
+**» /tts** - Turn text to speech
+"""
