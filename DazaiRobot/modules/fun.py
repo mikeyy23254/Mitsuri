@@ -366,6 +366,45 @@ def boypfp(update: Update, context: CallbackContext):
         reply = temp.format(user1=user1, user2=user2)
         reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
+def girlpfp(update: Update, context: CallbackContext):
+    bot = context.bot
+    args = context.args
+    message = update.effective_message
+
+    reply_to = message.reply_to_message if message.reply_to_message else message
+
+    curr_user = html.escape(message.from_user.first_name)
+    user_id = extract_user(message, args)
+
+    if user_id:
+        girlpfp_user = bot.get_chat(user_id)
+        user1 = curr_user
+        user2 = html.escape(girlpfp_user.first_name)
+
+    else:
+        user1 = bot.first_name
+        user2 = curr_user
+
+    girlpfp_type = random.choice(("Text", "Gif", "Sticker"))
+    if girlpfp_type == "Gif":
+        try:
+            temp = random.choice(fun_strings.GIRLPFP_GIFS)
+            reply_to.reply_animation(temp)
+        except BadRequest:
+            girlpfp_type = "Sticker"
+
+    if girlpfp_type == "Sticker":
+        try:
+            temp = random.choice(fun_strings.GIRLPFP_STICKERS)
+            reply_to.reply_sticker(temp)
+        except BadRequest:
+            girlpfp_type = "Sticker"
+
+    if girlpfp_type == "Text":
+        temp = random.choice(fun_strings.GIRLPFP_TEMPLATES)
+        reply = temp.format(user1=user1, user2=user2)
+        reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
+
 
 def shout(update: Update, context: CallbackContext):
     args = context.args
@@ -464,6 +503,7 @@ __help__ = """
  ❍ /kawai*:* kawaii
  ❍ /hug*:* hug a user, or get hugged
  ❍ /8ball*:* predicts using 8ball method 
+ ❍ /girlpfp*:* to get girls aesthetic pfps through stickers and Channel
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=True)
@@ -476,6 +516,7 @@ HUG_HANDLER = DisableAbleCommandHandler("hug", hug, run_async=True)
 BAM_HANDLER = DisableAbleCommandHandler("bam", bam, run_async=True)
 GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=True)
 BOYPFP_HANDLER = DisableAbleCommandHandler("boypfp", boypfp, run_async=True)
+GIRLPFP_HANDLER = DisableAbleCommandHandler("girlpfp", girlpfp, run_async=True)
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll, run_async=True)
 TOSS_HANDLER = DisableAbleCommandHandler("toss", toss, run_async=True)
 SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug, run_async=True)
@@ -497,6 +538,7 @@ dispatcher.add_handler(HUG_HANDLER)
 dispatcher.add_handler(BAM_HANDLER)
 dispatcher.add_handler(GBAM_HANDLER)
 dispatcher.add_handler(BOYPFP_HANDLER)
+dispatcher.add_handler(GIRLPFP_HANDLER)
 dispatcher.add_handler(ROLL_HANDLER)
 dispatcher.add_handler(TOSS_HANDLER)
 dispatcher.add_handler(SHRUG_HANDLER)
@@ -521,6 +563,7 @@ __command_list__ = [
     "pat",
     "kawai",
     "boypfp",
+    "girlpfp",
     "hug",
     "kiss",
     "bam",
@@ -540,6 +583,7 @@ __handlers__ = [
     BAM_HANDLER,
     GBAM_HANDLER,
     BOYPFP_HANDLER,
+    GIRLPFP_HANDLER,
     ROLL_HANDLER,
     TOSS_HANDLER,
     SHRUG_HANDLER,
