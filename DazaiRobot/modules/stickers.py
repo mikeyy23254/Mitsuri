@@ -985,15 +985,6 @@ __mod_name__ = "𝐒ᴛɪᴄᴋᴇʀ"
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
 
-# """
-from DazaiRobot.modules.language import gs
-
-
-def get_help(chat):
-    return gs(chat, "sticker_help")
-
-
-# """
 
 STICKERID_HANDLER = CommandHandler("stickerid", stickerid, run_async=True)
 GETSTICKER_HANDLER = CommandHandler("getsticker", getsticker, run_async=True)
