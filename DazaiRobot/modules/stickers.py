@@ -986,7 +986,7 @@ __mod_name__ = "𝐒ᴛɪᴄᴋᴇʀ"
 
 
 # """
-from Exon.modules.language import gs
+from DazaiRobot.modules.language import gs
 
 
 def get_help(chat):
