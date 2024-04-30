@@ -314,7 +314,34 @@ KAWAI_STICKERS = (
 
 BOYPFP_TEMPLATES = (
     "Want Aesthetic Pfps then join :- @PfpArena",  
-  "https://telegra.ph/file/a549be101e2a9184f84e3.png"  
+  "https://telegra.ph/file/a549be101e2a9184f84e3.png"
+    "https://te.legra.ph/file/c93e426c6f15bb9d67670.jpg"
+    "https://te.legra.ph/file/4cc18bac4777618968f77.jpg"
+    "https://te.legra.ph/file/8e10680434ab9dfb745f8.jpg"
+    "https://te.legra.ph/file/97adbb5474a2569bd1504.jpg"
+    "https://te.legra.ph/file/e853c0bd5d93c8606e7fa.jpg"
+    "https://te.legra.ph/file/2d8267ca14f2fd1dfe8a7.jpg"
+    "https://te.legra.ph/file/8f318f5e2e2d01d75089e.jpg"
+    "https://te.legra.ph/file/da468b4cc382d792d17d2.jpg"
+    "https://te.legra.ph/file/a0b0c37212437e4afb2ab.jpg"
+    "https://te.legra.ph/file/bdd8f8e29410a61a2acff.jpg"
+    "https://te.legra.ph/file/fceb9ba7db18e8f4fca46.jpg"
+    "https://te.legra.ph/file/03746de271002682e5b2b.jpg"
+    "https://te.legra.ph/file/3b6cbdf47f98aaecb0aa9.jpg"
+    "https://te.legra.ph/file/d1167ec8acbef4d98bf54.jpg"
+    "https://te.legra.ph/file/aab24a2f5e5caa2469b73.jpg"
+    "https://te.legra.ph/file/0693cd20b0e206957f6e3.jpg"
+    "https://te.legra.ph/file/127868cf9546b6b1d4b41.jpg"
+    "https://te.legra.ph/file/9d2e1aa2be71ea2706730.jpg"
+    "https://te.legra.ph/file/2a794be0e53a2cf724c04.jpg"
+    "https://te.legra.ph/file/8af5f149ae787cc8e1d08.jpg"
+    "https://te.legra.ph/file/91fd1e634cc454e25a6c5.jpg"
+    "https://te.legra.ph/file/4297601e0577cdc6d2eed.jpg"
+    "https://te.legra.ph/file/f35fc82fbb6a28c77a8d5.jpg"
+    "https://te.legra.ph/file/99ec165786a24d744a1bd.jpg"
+    "https://te.legra.ph/file/e50422b07ec2f0c2cf4ac.jpg"
+    "https://te.legra.ph/file/20778d65a87a0361bf747.jpg"
+    "https://te.legra.ph/file/b36970f6781e5aac9562f.jpg"
 )
 
 BOYPFP_GIFS = (
@@ -326,22 +353,6 @@ BOYPFP_GIFS = (
 BOYPFP_STICKERS = (
     "CAACAgUAAxkBAAJPVWXzGECVGDFoIeqwdvjXj2TWyzvoAAL_DAAC1LzYVQfUvYgzGLSkNAQ",
     "CAACAgUAAxkBAAJPVWXzGECVGDFoIeqwdvjXj2TWyzvoAAL_DAAC1LzYVQfUvYgzGLSkNAQ",
-    "CAACAgUAAxkBAAIKdWX0ii-24tf-uotHgHxfA-ZqmVdsAAI2DwACR7agV3WozRa3aEUoNAQ",
-    "CAACAgUAAxkBAAIKemX0il0AAdXfu_aFm5iV0HTqkGDOxgACeQ8AAnKBoFcxjFtLCnHWNzQE",
-    "CAACAgUAAxkBAAIKfWX0io1wS1L5ds8BvbooJWprJuLfAAIoFgACXrGhV8y2Ur2LlNQuNAQ",
-    "CAACAgUAAxkBAAIKgGX0iqqEpz7QOjAca7AYC1JRa5SiAALwCwACeUOhVxnpjvV7KC8yNAQ",
-    "CAACAgUAAxkBAAIKg2X0isMvSk--A2dTpMAiyfuOtPltAAKZCgAC8w2oVzM74LfWcoUgNAQ",
-    "CAACAgUAAxkBAAIKhGX0isTTZgKOMO5oJRCFqr9ZtZXwAAJBDgACrXSpVwPP_nPBu1w7NAQ",
-    "CAACAgUAAxkBAAIKi2X0iv3E2rmMJ5e9dffFSw9vJddfAAI-DAAC0dOpV00hkTRwGDg4NAQ",
-    "CAACAgUAAxkBAAIKjmX0ixnsNNmF0Ryts0fPTmD7iVCDAAJmEQAC1_agV2OKZ2V3Fqy0NAQ",
-    "CAACAgUAAxkBAAIKkWX0iy1jSAn3i-cv1KCTN1AiO0obAAIGGQACJiqgV3lU9C1xoke-NAQ",
-    "CAACAgUAAxkBAAIKlGX0i0oJik2veAakzzKfI-waahGPAALDDwACSe6gVzFMCLYNN_rlNAQ",
-    "CAACAgUAAxkBAAIKl2X0i2-P1O-bLowuMhPCm8tqCQABygACfg4AAmEuqVcw2ChrQ4OTjTQE",
-    "CAACAgUAAxkBAAIKmmX0i4PfBVonPfcVAblI61tR0IuSAAK3CwAClL2pV2fn0ibT6RFbNAQ",
-    "CAACAgUAAxkBAAIKnWX0i5h5eq4GYsoB47R61lEtiE_AAALZDQAC3KSpVyHTRca0mNtwNAQ",
-    "CAACAgUAAxkBAAIKoGX0i6sL4RXTw4Wp_xqdiIKTX_cKAAJADwACTBWpVzatwekUD_4tNAQ",
-    "CAACAgUAAxkBAAIKo2X0i8mmKyn4bXZ6WQmCmkQxejA9AAMQAALhC6FXto98b2W2D240BA",
-    "CAACAgUAAxkBAAIKpmX0i-LKTcSJ3L9YEmO1X-pP-dLmAAKyDgACEyehV-MQtvNMGUVCNAQ",
 )
 
 GIRLPFP_TEMPLATES = (
