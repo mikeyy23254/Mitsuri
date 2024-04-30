@@ -1,4 +1,4 @@
-from DazaiRobot import app 
+from DazaiRobot import pbot as app 
 import asyncio
 import random
 from pyrogram import Client, filters
@@ -6,7 +6,6 @@ from pyrogram.enums import ChatType, ChatMemberStatus
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import ChatPermissions
 
-from DazaiRobot import pbot as app
 
 spam_chats = []
 
