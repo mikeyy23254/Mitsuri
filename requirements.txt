@@ -52,4 +52,4 @@ orjson
 youtube_search
 gtts
 Lexica-api
-openai==0.28.0
+openai==1.25.1
