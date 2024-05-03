@@ -402,5 +402,4 @@ Bright, Circle, RemBG, Blur, Border, Flip, Glitch, Sticker maker and more
  /rmbg [REPLY]*:* Remove BG of replied image/sticker.
 
 
-"""
 
