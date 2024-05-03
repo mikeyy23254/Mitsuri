@@ -401,5 +401,6 @@ Bright, Circle, RemBG, Blur, Border, Flip, Glitch, Sticker maker and more
  /edit [reply to image]*:* Open the image editor
  /rmbg [REPLY]*:* Remove BG of replied image/sticker.
 
+
 """
 
