@@ -5,9 +5,8 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     Message,
 )
-from DazaiRobot import CUTIEPII_PTB, LOGGER
+from DazaiRobot import pbot as app, LOGGER
 
-# By @TroJanzHEX
 from DazaiRobot.utils.resources.ImageEditor.edit_1 import (
     black_white, box_blur, bright, g_blur, mix, normal_blur,
 )
