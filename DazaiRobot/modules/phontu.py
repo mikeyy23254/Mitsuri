@@ -6,6 +6,7 @@ from pyrogram.types import (
     Message,
 )
 from DazaiRobot import pbot as app, LOGGER
+from pyrogram import Client as pgram
 
 from DazaiRobot.utils.resources.ImageEditor.edit_1 import (
     black_white, box_blur, bright, g_blur, mix, normal_blur,
