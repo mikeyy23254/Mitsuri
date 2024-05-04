@@ -8,7 +8,8 @@ import requests
 from PIL import Image, ImageDraw, ImageOps
 
 from DazaiRobot import REM_BG_API_KEY, LOGGER
-from aiohttp import Client
+from DazaiRobot import pbot as Client 
+
 
 
 async def rotate_90(client: Client, message: Message):
