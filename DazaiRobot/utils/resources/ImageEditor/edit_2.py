@@ -6,7 +6,8 @@ import numpy as np
 
 from DazaiRobot import LOGGER
 from PIL import Image, ImageDraw, ImageEnhance
-from aiohttp import Client
+from DazaiRobot import pbot as Client 
+
 
 async def circle_with_bg(client: Client, message: Message):
     try:
