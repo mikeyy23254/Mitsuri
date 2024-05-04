@@ -392,7 +392,7 @@ GIRLPFP_STICKERS = (
 )
 
 WAIFU_TEMPLATES = (
-    "[WAIFU]{"https://te.legra.ph/file/358a96eb7dea635ad5b4c.jpg"}",    
+    "https://te.legra.ph/file/358a96eb7dea635ad5b4c.jpg",    
 )
 
 WAIFU_GIFS = (
