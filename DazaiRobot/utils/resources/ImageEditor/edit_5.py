@@ -3,7 +3,7 @@ import os
 import shutil
 
 from DazaiRobot import LOGGER
-from aiohttp import Client
+from DazaiRobot import pbot as Client 
 
 async def normalglitch_1(client: Client, message: Message):
     try:
