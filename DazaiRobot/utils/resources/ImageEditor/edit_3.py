@@ -3,7 +3,8 @@ import shutil
 
 from PIL import Image, ImageOps
 from DazaiRobot import LOGGER
-from aiohttp import Client
+from DazaiRobot import pbot as Client 
+
 
 
 async def black_border(client: Client, message: Message):
