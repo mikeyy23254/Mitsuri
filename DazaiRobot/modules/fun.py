@@ -543,6 +543,7 @@ __help__ = """
  ❍ /hug*:* hug a user, or get hugged
  ❍ /8ball*:* predicts using 8ball method 
  ❍ /girlpfp*:* to get girls aesthetic pfps through stickers and Channel
+ ❍ /waifu*:* to get waifu images and gifs
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=True)
@@ -556,6 +557,7 @@ BAM_HANDLER = DisableAbleCommandHandler("bam", bam, run_async=True)
 GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=True)
 BOYPFP_HANDLER = DisableAbleCommandHandler("boypfp", boypfp, run_async=True)
 GIRLPFP_HANDLER = DisableAbleCommandHandler("girlpfp", girlpfp, run_async=True)
+WAIFU_HANDLER = DisableAbleCommandHandler("waifu", waifu, run_async=True)
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll, run_async=True)
 TOSS_HANDLER = DisableAbleCommandHandler("toss", toss, run_async=True)
 SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug, run_async=True)
