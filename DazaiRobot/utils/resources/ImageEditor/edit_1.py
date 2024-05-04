@@ -4,7 +4,7 @@ import cv2
 
 from DazaiRobot import LOGGER
 from PIL import Image, ImageEnhance, ImageFilter
-
+from aiohttp import Client
 
 async def bright(client: Client, message: Message):
     try:
