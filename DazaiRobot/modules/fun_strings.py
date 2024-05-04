@@ -391,6 +391,25 @@ GIRLPFP_STICKERS = (
     "CAACAgUAAx0CYhkUPAABE7B0ZipGSDMBg7B_4LwZvSETK8Ts98AAAnwRAALLTllVGjwUR0dm-do0BA",
 )
 
+WAIFU_TEMPLATES = (
+    "https://te.legra.ph/file/358a96eb7dea635ad5b4c.jpg",    
+)
+
+WAIFU_GIFS = (
+    "https://te.legra.ph/file/72d83f4795030921c94be.mp4",
+    "https://te.legra.ph/file/f04b845f810172874561f.mp4",
+
+)
+
+WAIFU_STICKERS = (
+    "https://te.legra.ph/file/d0602ff9805183c5e4871.jpg",
+    "https://te.legra.ph/file/77968149e9724e5333859.jpg",
+    "https://te.legra.ph/file/7a67c946ba2bb40e30461.jpg",
+    "https://te.legra.ph/file/0487fde790cb2887730e3.jpg",
+    "https://te.legra.ph/file/b01971bc3ff74ee1afa64.jpg",
+    
+)
+
 BAM_TEMPLATES = (
     "{user1} banned {user2} Go Away Demon", 
     "*{user2} demon got banned.. Reason :- Baka Demon",   
