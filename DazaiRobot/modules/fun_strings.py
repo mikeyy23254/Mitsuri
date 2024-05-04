@@ -399,6 +399,8 @@ WAIFU_GIFS = (
     "https://te.legra.ph/file/72d83f4795030921c94be.mp4",
     "https://te.legra.ph/file/f04b845f810172874561f.mp4",
 
+"https://pin.it/2CXz8tALy",
+
 )
 
 WAIFU_STICKERS = (
