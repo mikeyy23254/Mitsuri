@@ -405,6 +405,45 @@ def girlpfp(update: Update, context: CallbackContext):
         reply = temp.format(user1=user1, user2=user2)
         reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
+def waifu(update: Update, context: CallbackContext):
+    bot = context.bot
+    args = context.args
+    message = update.effective_message
+
+    reply_to = message.reply_to_message if message.reply_to_message else message
+
+    curr_user = html.escape(message.from_user.first_name)
+    user_id = extract_user(message, args)
+
+    if user_id:
+        waifu_user = bot.get_chat(user_id)
+        user1 = curr_user
+        user2 = html.escape(waifu_user.first_name)
+
+    else:
+        user1 = bot.first_name
+        user2 = curr_user
+
+    waifu_type = random.choice(("Text", "Gif", "Sticker"))
+    if waifu_type == "Gif":
+        try:
+            temp = random.choice(fun_strings.WAIFU_GIFS)
+            reply_to.reply_animation(temp)
+        except BadRequest:
+            waifu_type = "Sticker"
+
+    if waifu_type == "Sticker":
+        try:
+            temp = random.choice(fun_strings.WAIFU_STICKERS)
+            reply_to.reply_sticker(temp)
+        except BadRequest:
+            waifu_type = "Sticker"
+
+    if waifu_type == "Text":
+        temp = random.choice(fun_strings.WAIFU_TEMPLATES)
+        reply = temp.format(user1=user1, user2=user2)
+        reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
+
 
 def shout(update: Update, context: CallbackContext):
     args = context.args
@@ -539,6 +578,7 @@ dispatcher.add_handler(BAM_HANDLER)
 dispatcher.add_handler(GBAM_HANDLER)
 dispatcher.add_handler(BOYPFP_HANDLER)
 dispatcher.add_handler(GIRLPFP_HANDLER)
+dispatcher.add_handler(WAIFU_HANDLER)
 dispatcher.add_handler(ROLL_HANDLER)
 dispatcher.add_handler(TOSS_HANDLER)
 dispatcher.add_handler(SHRUG_HANDLER)
@@ -564,6 +604,7 @@ __command_list__ = [
     "kawai",
     "boypfp",
     "girlpfp",
+    "waifu",
     "hug",
     "kiss",
     "bam",
@@ -584,6 +625,7 @@ __handlers__ = [
     GBAM_HANDLER,
     BOYPFP_HANDLER,
     GIRLPFP_HANDLER,
+    WAIFU_HANDLER,
     ROLL_HANDLER,
     TOSS_HANDLER,
     SHRUG_HANDLER,
