@@ -4,7 +4,7 @@ from DazaiRobot import pbot as app
 from DazaiRobot.misc import SUDOERS
 from pyrogram import * 
 from pyrogram.types import *
-from DazaiRobot.utils.levi_ban import admin_filter
+from DazaiRobot.utils.Levi_ban import admin_filter
 
 
 
