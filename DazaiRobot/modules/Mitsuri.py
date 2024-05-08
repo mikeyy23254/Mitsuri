@@ -1,7 +1,7 @@
 import requests
 import random
 from DazaiRobot import pbot as app
-from DazaiRobot.config import SUDOERS
+from DazaiRobot.config import DRAGON 
 from pyrogram import * 
 from pyrogram.types import *
 from DazaiRobot.utils.Levi_ban import admin_filter
