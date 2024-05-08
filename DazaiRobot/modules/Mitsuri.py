@@ -1,7 +1,7 @@
 import requests
 import random
 from DazaiRobot import pbot as app
-from DazaiRobot.config import DRAGON 
+from DazaiRobot.config import DRAGONS
 from pyrogram import * 
 from pyrogram.types import *
 from DazaiRobot.utils.Levi_ban import admin_filter
@@ -11,16 +11,8 @@ from DazaiRobot.utils.Levi_ban import admin_filter
 
 
 
-Yumikoo_text = [
+Mitsuri_text = [
 "hey please don't disturb me.",
-"who are you",    
-"aap kon ho",
-"aap mere owner to nhi lgte ",
-"hey tum mera name kyu le rhe ho meko sone do",
-"ha bolo kya kaam hai ",
-"dekho abhi mai busy hu ",
-"hey i am busy",
-"aapko smj nhi aata kya ",
 "leave me alone",
 "dude what happend",    
 ]
@@ -28,10 +20,8 @@ Yumikoo_text = [
 strict_txt = [
 "i can't restrict against my besties",
 "are you serious i am not restrict to my friends",
-"fuck you bsdk k mai apne dosto ko kyu kru",
 "hey stupid admin ", 
-"ha ye phele krlo maar lo ek dusre ki gwaand",  
-"i can't hi is my closest friend",
+"i can't he is my closest friend",
 "i love him please don't restict this user try to usertand "
 ]
 
@@ -53,12 +43,12 @@ channel = ["channel"]
 # ========================================= #
 
 
-@app.on_message(filters.command(["exi","exiko"], prefixes=["n", "N"]) & admin_filter)
+@app.on_message(filters.command(["mit","mitsuri"], prefixes=["n", "N"]) & admin_filter)
 async def restriction_app(app :app, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
     if len(message.text) < 2:
-        return await message.reply(random.choice(Yumikoo_text))
+        return await message.reply(random.choice(Mitsuri_text))
     bruh = message.text.split(maxsplit=1)[1]
     data = bruh.split(" ")
 
@@ -67,11 +57,11 @@ async def restriction_app(app :app, message):
         for banned in data:
             print(f"present {banned}")
             if banned in ban:
-                if user_id in SUDOERS:
+                if user_id in DRAGONS:
                     await message.reply(random.choice(strict_txt))          
                 else:
                     await app.ban_chat_member(chat_id, user_id)
-                    await message.reply("OK, Ban kar diya madrchod ko sala Chutiya tha !")
+                    await message.reply("OK, Banned!")
 
         for unbanned in data:
             print(f"present {unbanned}")
@@ -82,18 +72,18 @@ async def restriction_app(app :app, message):
         for kicked in data:
             print(f"present {kicked}")
             if kicked in kick:
-                if user_id in SUDOERS:
+                if user_id in DRAGONS:
                     await message.reply(random.choice(strict_txt))
 
                 else:
                     await app.ban_chat_member(chat_id, user_id)
                     await app.unban_chat_member(chat_id, user_id)
-                    await message.reply("get lost! bhga diya bhosdi wale ko") 
+                    await message.reply("get lost!") 
 
         for muted in data:
             print(f"present {muted}") 
             if muted in mute:
-                if user_id in SUDOERS:
+                if user_id in DRAGONS:
                     await message.reply(random.choice(strict_txt))
 
                 else:
