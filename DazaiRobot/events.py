@@ -7,6 +7,8 @@ from telethon import events
 
 from DazaiRobot import MONGO_DB_URI, telethn
 
+DRAGONS = filters.user()
+
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
 db = client["Anonymous"]
