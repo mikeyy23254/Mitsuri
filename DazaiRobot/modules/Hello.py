@@ -43,7 +43,6 @@ async def react_to_message(client, message):
         print(f"Failed to set reaction. Status code: {response.status_code}")
         print("Response content:", response.content)
 
-print("starting...")
 app.start()
 
 idle()
