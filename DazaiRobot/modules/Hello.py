@@ -2,10 +2,12 @@ from pyrogram import Client, filters
 import requests
 import random
 
-api_id = 26480985 #--Add your Api Id here
-api_hash = '56c935fae1c5c86ba5a3af655f8caa9d' #--Enter Api Hash Here
+from DazaiRobot import pbot as app
 
-token = '71955940eGa8PZG-vIAx8_Ow' #--Enter Bot Token Here.
+api_id = 29422639 #--Add your Api Id here
+api_hash = 'e21bccfd64a01c5762ce81c77379dc7f' #--Enter Api Hash Here
+
+token = '6561748036:AAH4AYJGfJFuPqaP8UAyUzVw5aRjRDNSgjw' #--Enter Bot Token Here.
 
 emojis = ["👍", "👎", "❤️", "🔥", "🥰", "👏", "😁", "🤔", "🤯", "😱", "🤬", "😢", "🎉", "🤩", "🤮", "💩", "🙏", "👌", "🕊", "🤡", "🥱", "🥴", "😍", "🐳", "❤️‍🔥", "🌚", "🌭", "💯", "🤣", "⚡️", "🍌", "🏆", "💔", "🤨", "😐", "🍓", "🍾", "💋", "🖕", "😈", "😴", "😭", "🤓", "👻", "👨‍💻", "👀", "🎃", "🙈", "😇", "😨", "🤝", "✍️", "🤗", "🫡", "🎅", "🎄", "☃️", "💅", "🤪", "🗿", "🆒", "💘", "🙉", "🦄", "😘", "💊", "🙊", "😎", "👾", "🤷‍♂️", "🤷", "🤷‍♀️", "😡"]
 
