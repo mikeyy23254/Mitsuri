@@ -23,7 +23,7 @@
          "value": "d1d8331e5b288c572e8bb6baa7d8f833"
       },
       "ALLOW_EXCL": {
-         "description": "Set this to True if you want ! to be a command prefix along with /. Recommended is True",
+         "description": "Set this to True if you want Mitsuri to be a command prefix along with /. Recommended is True",
          "value": "True"
       },
       "CASH_API_KEY": {
