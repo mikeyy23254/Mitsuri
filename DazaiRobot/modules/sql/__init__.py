@@ -26,7 +26,7 @@ def start() -> scoped_session:
 
 try:
     # Initialize the session
-    SESSION = start(postgresql://hjvbfqlt:Nk6a2lXvBIW7obyFl8LcJTOiKI7YhCnC@berry.db.elephantsql.com/hjvbfqlt)
+    SESSION = start("postgresql://hjvbfqlt:Nk6a2lXvBIW7obyFl8LcJTOiKI7YhCnC@berry.db.elephantsql.com/hjvbfqlt")
     log.info("[PostgreSQL] Connection successful, session started.")
 except Exception as e:
     log.exception(f"[PostgreSQL] Failed to connect due to {e}")
