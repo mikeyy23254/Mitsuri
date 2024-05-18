@@ -9,7 +9,7 @@ from DazaiRobot import LOGGER as log
 BASE = declarative_base()
 
 # Check and modify DB_URI if necessary
-if DB_URI and DB_URI.startswith("postgres://"):
+if DB_URI and DB_URI.startswith("postgresql://hjvbfqlt:Nk6a2lXvBIW7obyFl8LcJTOiKI7YhCnC@berry.db.elephantsql.com/hjvbfqlt"):
     DB_URI = DB_URI.replace("postgres://", "postgresql://", 1)
 
 # Function to start the database session
