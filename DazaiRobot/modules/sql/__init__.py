@@ -6,26 +6,22 @@ from DazaiRobot import DB_URI
 from DazaiRobot import LOGGER as log
 
 # Create a base class for the ORM models
-BASE = declarative_base()
+
 
 # Check and modify DB_URI if necessary
-if DB_URI and DB_URI.startswith("postgresql://hjvbfqlt:Nk6a2lXvBIW7obyFl8LcJTOiKI7YhCnC@berry.db.elephantsql.com/hjvbfqlt"):
-    DB_URI = DB_URI.replace("postgres://", "postgresql://", 1)
 
 # Function to start the database session
 def start() -> scoped_session:
-    if not DB_URI:
-        log.error("DB_URI is not set or is None")
-        raise ValueError("DB_URI is not set or is None")
-
-    engine = create_engine(DB_URI, client_encoding="utf8")
+    engine = create_engine( "postgresql://hjvbfqlt:Nk6a2lXvBIW7obyFl8LcJTOiKI7YhCnC@berry.db.elephantsql.com/hjvbfqlt" , client_encoding="utf8")
     log.info("[PostgreSQL] Connecting to database......")
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
-    return scoped_session(sessionmaker(bind=engine, autoflush=False))
+    return scoped_session(sessionmaker(bind=engine, autoflush=True))
 
+BASE = declarative_base()
 try:
     # Initialize the session
+
     SESSION = start()
     log.info("[PostgreSQL] Connection successful, session started.")
 except Exception as e:
