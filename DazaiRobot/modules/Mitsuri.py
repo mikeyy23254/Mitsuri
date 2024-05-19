@@ -3,7 +3,7 @@ import time
 from pyrogram import filters
 from pyrogram import Client
 from DazaiRobot import pbot as app
-from DAXXMUSIC.misc import SUDOERS
+from DazaiRobot.config import 
 
 # Define the spam command handler
 @app.on_message(filters.command("raid", prefixes=".") & SUDOERS)
