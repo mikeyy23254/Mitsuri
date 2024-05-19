@@ -12,7 +12,7 @@ openai.api_key = "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"
 
 
 
-@app.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&","Mitsuri"]))
+@app.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&","Mitsuri "]))
 async def chat(app :app, message):
 
     try:
