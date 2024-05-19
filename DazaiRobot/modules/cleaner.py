@@ -13,7 +13,7 @@ from DazaiRobot.modules.helper_funcs.chat_status import (
 )
 from DazaiRobot.modules.sql import cleaner_sql as sql
 
-CMD_STARTERS = ("/", "Mitsuri") if ALLOW_EXCL else "/"
+CMD_STARTERS = ("/", "Mitsuri ") if ALLOW_EXCL else "/"
 BLUE_TEXT_CLEAN_GROUP = 13
 CommandHandlerList = (CommandHandler, CustomCommandHandler, DisableAbleCommandHandler)
 command_list = [
