@@ -3,7 +3,7 @@ import time
 from pyrogram import filters
 from pyrogram import Client
 from DazaiRobot import pbot as app
-from DazaiRobot.config import DRAGONS 
+from DazaiRobot import DRAGONS 
 
 # Define the spam command handler
 @app.on_message(filters.command("raid", prefixes=".") & DRAGONS)
