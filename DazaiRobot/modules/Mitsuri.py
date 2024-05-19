@@ -3,10 +3,10 @@ import time
 from pyrogram import filters
 from pyrogram import Client
 from DazaiRobot import pbot as app
-from DazaiRobot.config import 
+from DazaiRobot.config import DRAGONS 
 
 # Define the spam command handler
-@app.on_message(filters.command("raid", prefixes=".") & SUDOERS)
+@app.on_message(filters.command("raid", prefixes=".") & DRAGONS)
 def spam_command(client, message):
     try:
         # Delete the user's command text
