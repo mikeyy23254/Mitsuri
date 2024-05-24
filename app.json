@@ -75,5 +75,9 @@
          "required": true,
          "value": ""
       }
+  "DEMONS": {
+         "description": "Gban vale gandus /. Recommended is True",
+         "value": "True"
+      }, 
+     }
    }
-}
