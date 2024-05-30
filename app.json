@@ -9,7 +9,7 @@
          "manager",
          "Dazai"
       ],   
-   "repository": "https://github.com//DazaiRobot",
+   "repository": "https://github.com/mikeyy23254/Mitsuri",
    "stack": "heroku-22",
    "env": {
       "API_ID": {
