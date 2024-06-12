@@ -1,7 +1,7 @@
 services:
-  - type: web
+  - type: app
     name: Mitsuri
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python bot.py"
+    startCommand: "python3 -m DazaiRobot "
     port: 8080
