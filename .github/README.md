@@ -67,7 +67,7 @@ Press `Ctrl+b` and then `d`
 
 ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ᴋᴏʏᴇʙ 」─
 </h3>
-<p align="center"><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/Codeflix-Bots/FileStore&branch=multi-fsub&name=multi-fsub">
+<p align="center"><a href="https://app.koyeb.com/deploy?type=git&repository=">
   <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy On Koyeb">
 </a></p>
 <h3 align="center">
