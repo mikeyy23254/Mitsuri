@@ -22,7 +22,14 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [𝐌𝐈𝐓𝐒�
     『 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 』
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/mikeyy23254/Mitsuri"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/mikeyy23254/Mitsuri"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p> 
+
+─「 ᴅᴇᴩʟᴏʏ ᴏɴ ᴋᴏʏᴇʙ 」─
+</h3>
+<p align="center"><a href="https://app.koyeb.com/deploy?type=git&repository=https://github.com/mikeyy23254/Mitsuri">
+  <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy On Koyeb">
+</a></p>
+<h3 align="center">
 
 
 <h3 align="center">
@@ -64,10 +71,3 @@ Press `Ctrl+b` and then `d`
 <p align="center">
   <img src="https://telegra.ph/file/ad2b38da713ceb2f6085b.jpg">
 </p> 
-
-─「 ᴅᴇᴩʟᴏʏ ᴏɴ ᴋᴏʏᴇʙ 」─
-</h3>
-<p align="center"><a href="https://app.koyeb.com/deploy?type=git&repository=">
-  <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy On Koyeb">
-</a></p>
-<h3 align="center">
