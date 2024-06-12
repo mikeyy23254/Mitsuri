@@ -3,5 +3,5 @@ services:
     name: my-app
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    startCommand: "gunicorn app:DazaiRobot"
     port: 8080
