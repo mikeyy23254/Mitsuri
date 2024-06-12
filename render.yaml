@@ -1,7 +1,7 @@
 services:
   - type: web
-    name: my-app
+    name: Mitsuri
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:DazaiRobot"
+    startCommand: "python bot.py"
     port: 8080
