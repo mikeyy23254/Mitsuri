@@ -1,6 +1,6 @@
 services:
   telegram-bot:
- build: .
+    build: .
     environment:
       TELEGRAM_BOT_TOKEN: 6561748036:AAEGF_LM_8_kYojtfCnj3gpJ11pA0_Qu35Q
       TELEGRAM_CHAT_ID: -1001987915872
