@@ -6,4 +6,4 @@ services:
       TELEGRAM_CHAT_ID: -1001987915872
     ports:
       - "8443:8443"
-    command: -m DazaiRobot
+    command: python3 -m DazaiRobot
