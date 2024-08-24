@@ -7,4 +7,4 @@ services:
     ports:
       - "8443:8443"
   
-    entrypoint: ["python", "main.py"]
+    entrypoint: ["python3", "main.py"]
