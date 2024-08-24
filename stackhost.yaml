@@ -1,4 +1,9 @@
-token: 6561748036:AAEGF_LM_8_kYojtfCnj3gpJ11pA0_Qu35Q
-chat_id: -1001987915872
-github_token: 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
-repository: https://github.com/mikeyy23254/Mitsuri
+services:
+  telegram-bot:
+ build: .
+    environment:
+      TELEGRAM_BOT_TOKEN: 6561748036:AAEGF_LM_8_kYojtfCnj3gpJ11pA0_Qu35Q
+      TELEGRAM_CHAT_ID: -1001987915872
+    ports:
+      - "8443:8443"
+    command: python bot.py
