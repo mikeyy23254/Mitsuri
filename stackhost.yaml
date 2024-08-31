@@ -1,10 +1,16 @@
-services:
-  telegram-bot:
-    build: .
-    environment:
-      TELEGRAM_BOT_TOKEN: 6561748036:AAEGF_LM_8_kYojtfCnj3gpJ11pA0_Qu35Q
-      TELEGRAM_CHAT_ID: -1001987915872
-    ports:
-      - "8443:8443"
-  
-    entrypoint: ["python3", "main.py"]
+user:
+  name: ishikki
+  github: ishikki-akabane
+
+python_version: "3.10"
+
+commands:
+  build:
+    - "pip install -r requirements.txt"
+  package:
+    - "nano inxi"
+  start:
+    - "python3 app.py"
+
+env:
+  - "ENVIRONMENT=production"
