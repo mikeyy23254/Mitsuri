@@ -9,7 +9,7 @@ bleach==6.0.0
 unidecode
 async_pymongo
 bs4==0.0.1
-cachetools==5.3.3
+cachetools==5.5.2
 countryinfo==0.1.2
 currencyconverter==0.18.5
 dateparser==1.1.8
