@@ -60,7 +60,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Clone repo
-RUN git clone https://github.com/Anonymous-068/DazaiRobot /root/DazaiRobot
+RUN git clone https://github.com/mikeyy23254/DazaiRobot /root/DazaiRobot
 WORKDIR /root/DazaiRobot
 
 # Copy config
