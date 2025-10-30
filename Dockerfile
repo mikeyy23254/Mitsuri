@@ -1,9 +1,6 @@
-# We're using Debian Slim Buster image
-FROM python:3.8.5-slim-buster
+FROM python:3.8-slim-bullseye
 
-ENV PIP_NO_CACHE_DIR 1
-
-RUN sed -i.bak 's/us-west-2\.ec2\.//' /etc/apt/sources.list
+ENV PIP_NO_CACHE_DIR=1
 
 # Installing Required Packages
 RUN apt update && apt upgrade -y && \
@@ -42,7 +39,6 @@ RUN apt update && apt upgrade -y && \
     pv \
     jq \
     wget \
-    python3 \
     python3-dev \
     libreadline-dev \
     libyaml-dev \
@@ -59,22 +55,21 @@ RUN apt update && apt upgrade -y && \
     unzip \
     libopus0 \
     libopus-dev \
-    && rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives /tmp
 
-# Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/DazaiRobot
-RUN git clone https://github.com/Anonymous-068/DazaiRobot /root/DazaiRobot 
+# Clone repo
+RUN git clone https://github.com/Anonymous-068/DazaiRobot /root/DazaiRobot
 WORKDIR /root/DazaiRobot
 
-#Copy config file to /root/DazaiRobot/DazaiRobot
-COPY ./DazaiRobot/config.py ./DazaiRobot/config.py* /root/DazaiRobot/DazaiRobot/
+# Copy config
+COPY ./DazaiRobot/config.py /root/DazaiRobot/DazaiRobot/config.py
 
 ENV PATH="/home/bot/bin:$PATH"
 
-# Install requirements
+# Install Python dependencies
 RUN pip3 install -U -r requirements.txt
 
-# Starting Worker
-CMD ["python3","-m","DazaiRobot"]
+# Start the worker
+CMD ["python3", "-m", "DazaiRobot"]
