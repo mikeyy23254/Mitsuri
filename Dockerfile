@@ -1,8 +1,10 @@
+# Use a stable Python image (Buster is deprecated)
 FROM python:3.8-slim-bullseye
 
+# Disable pip cache for smaller image size
 ENV PIP_NO_CACHE_DIR=1
 
-# Installing Required Packages
+# Update and install system dependencies
 RUN apt update && apt upgrade -y && \
     apt install --no-install-recommends -y \
     debian-keyring \
@@ -57,19 +59,21 @@ RUN apt update && apt upgrade -y && \
     libopus-dev \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives /tmp
 
+# Upgrade pip and setuptools
 RUN pip3 install --upgrade pip setuptools
 
-# Clone repo
-RUN git clone https://github.com/mikeyy23254/DazaiRobot /root/DazaiRobot
+# Copy project files into container
 WORKDIR /root/DazaiRobot
+COPY . .
 
-# Copy config
+# Ensure config file is placed correctly
 COPY ./DazaiRobot/config.py /root/DazaiRobot/DazaiRobot/config.py
 
+# Add local bin to PATH
 ENV PATH="/home/bot/bin:$PATH"
 
 # Install Python dependencies
 RUN pip3 install -U -r requirements.txt
 
-# Start the worker
+# Start the bot
 CMD ["python3", "-m", "DazaiRobot"]
